@@ -1,0 +1,9 @@
+#logo {
+   display: flex;
+}
+
+img {
+   background-color: black;
+   width: 5rem;
+   height: 5rem;
+}
