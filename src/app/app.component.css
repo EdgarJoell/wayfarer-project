@@ -1,6 +1,6 @@
 .nav-bar {
   background-color: lightgray;
-
+  margin-top: -.8rem;
 }
 
 .nav-container {
@@ -9,5 +9,4 @@
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
-
 }
