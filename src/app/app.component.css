@@ -4,3 +4,8 @@
   justify-content: space-around;
   margin: auto;
 }
+
+.nav-container {
+  /* max-width: 160rem; */
+  width: 90rem;
+}
