@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HeaderModule } from './header/header.module';
+import { DisplayModule } from './display/display.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { HeaderModule } from './header/header.module';
   ],
   imports: [
     BrowserModule,
-    HeaderModule
+    HeaderModule,
+    DisplayModule
   ],
   providers: [],
   bootstrap: [AppComponent]
