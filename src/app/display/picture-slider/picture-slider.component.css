@@ -7,7 +7,7 @@
     justify-content: center;
     position: relative;
     margin: auto;
-    
+    border: 2px solid black;
 }
 
 img {
@@ -63,15 +63,6 @@ img {
     bottom: 8px;
     width: 100%;
     text-align: center;
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
   }
   
   /* The dots/bullets/indicators */
