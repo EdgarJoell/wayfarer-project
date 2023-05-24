@@ -13,17 +13,22 @@ export class PictureSliderComponent {
 
 
   slideIndex: number = 1;
-  // showSlides(slideIndex);
+  showSlides(slideIndex: number);
 
   //next/prev control
-  plusSlides(n :number): void {
+  
+  // plusSlides(n :number): void {
+  //   this.showSlides(this.slideIndex += n)
+  // }
+
+  plusSlider(n: number) {
     this.showSlides(this.slideIndex += n)
   }
 
-  showSlides(n: number) {
+  showSlides(n: number): void {
     let i: number = 0;
-    let slides: any = document.querySelectorAll('.img-slider');
-    let dots: any = document.querySelectorAll('.dot');
+    let slides: any = document.getElementsByClassName('.img-slider');
+    let dots: any = document.getElementsByClassName('.dot');
     if (n > slides.length) {this.slideIndex = 1}
     if (n < 1) {this.slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
@@ -36,8 +41,6 @@ export class PictureSliderComponent {
     dots[this.slideIndex-1].className += " active";
   }
 }
-
-
 
 /* We have an array of objects because the object
 will have the img string url and have the city name
