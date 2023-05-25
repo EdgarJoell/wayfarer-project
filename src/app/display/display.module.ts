@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PictureSliderComponent } from './picture-slider/picture-slider.component';
+import { CardsModule } from './cards/cards.module';
 
 
 
@@ -9,7 +10,8 @@ import { PictureSliderComponent } from './picture-slider/picture-slider.componen
     PictureSliderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    CardsModule
   ],
   exports: [PictureSliderComponent]
 })

@@ -1,0 +1,15 @@
+.cards {
+    margin: 3rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-text {
+    text-align: center;
+    font-size: 15px;
+}
+
