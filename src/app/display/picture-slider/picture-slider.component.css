@@ -6,8 +6,6 @@ img {
     pointer-events: none;
 }
 
-
-
 .carousel-item {
     pointer-events: none;
 }
@@ -18,4 +16,8 @@ img {
 
 .carouselIndicators {
     pointer-events: none;
+}
+
+.cards-container {
+    margin: 3rem 0;
 }

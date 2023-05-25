@@ -1,10 +1,6 @@
 <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
-    <li
-      data-target="#carouselIndicators"
-      data-slide-to="0"
-      class="active"
-    ></li>
+    <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselIndicators" data-slide-to="1"></li>
     <li data-target="#carouselIndicators" data-slide-to="2"></li>
     <li data-target="#carouselIndicators" data-slide-to="3"></li>
@@ -44,19 +40,22 @@
     </div>
 
     <div class="carousel-item">
-      <img class="d-block w-100" src="{{ images[3].source }}" alt="Fourth slide" />
+      <img
+        class="d-block w-100"
+        src="{{ images[3].source }}"
+        alt="Fourth slide"
+      />
       <div class="carousel-caption">
         <h1>{{ images[3].city }}</h1>
       </div>
     </div>
 
-      <!-- <div *ngFor="let image of images">
+    <!-- <div *ngFor="let image of images">
       <img src="{{ image.source }}" alt="{{ image.city }}" class="d-block w-100">
       <div class="carousel-caption">
         <h1>{{ image.city }}</h1>
       </div>
     </div> -->
-
   </div>
 
   <a
@@ -78,5 +77,6 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
-<app-cards></app-cards>
+<div class="d-flex justify-content-center align-items-center cards-container">
+  <app-cards></app-cards>
+</div>

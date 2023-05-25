@@ -1,15 +1,21 @@
 .cards {
-    margin: 3rem;
+    min-width: 80rem;
+    max-width: 80rem;
+    min-height: 12rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-content: center;
+    gap: 6rem;
 }
 
 .card-title {
     text-align: center;
+    font-size: 2rem;
 }
 
-.card-text {
+.card {
+    border-radius: 1rem;
+    min-width: 20rem;
+    max-width: 20rem;
     text-align: center;
-    font-size: 15px;
 }
-

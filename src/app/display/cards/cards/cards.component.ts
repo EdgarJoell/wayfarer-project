@@ -17,8 +17,8 @@ export class CardsComponent {
       },
       {
         header: "Excitement",
-        description: "Prepare to be captivated by thrilling experiences that will leave you with cherished memories and a renewed zest for life. Let us be your guide to extraordinary moments like no other!",
+        description: "Prepare to be captivated by thrilling experiences that will leave you with cherished memories and a renewed outlook for life. Let us be your guide to extraordinary moments like no other!",
       },
-      
+
     ]
 }
