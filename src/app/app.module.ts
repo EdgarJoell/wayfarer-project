@@ -6,7 +6,8 @@ import { BootstrapOptions } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderModule } from './header/header.module';
-import { DisplayModule } from './display/display.module';
+import { SplashPageModule } from './splash-page/splash-page.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DisplayModule } from './display/display.module';
   imports: [
     BrowserModule,
     HeaderModule,
-    DisplayModule
+    SplashPageModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
