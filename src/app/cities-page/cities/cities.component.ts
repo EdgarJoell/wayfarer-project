@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { cities } from '../city-info/cities';
 
 @Component({
   selector: 'app-cities',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./cities.component.css']
 })
 export class CitiesComponent {
-
+  cities = cities;
 }

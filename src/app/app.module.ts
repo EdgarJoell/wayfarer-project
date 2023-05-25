@@ -10,6 +10,7 @@ import { SplashPageModule } from './splash-page/splash-page.module';
 import { AppRoutingModule } from './app-routing.module';
 import { CitiesPageModule } from './cities-page/cities-page.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
