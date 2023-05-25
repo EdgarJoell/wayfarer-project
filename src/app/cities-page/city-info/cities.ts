@@ -19,7 +19,7 @@ export const cities: Cities[] = [
     id: 1,
     name: 'San Francisco',
     country: 'United States',
-    image: '',
+    image: '../assets/san_francisco.png',
     posts: [
       {
         id: 1,
@@ -41,7 +41,7 @@ export const cities: Cities[] = [
     id: 2,
     name: 'Orlando',
     country: 'United States',
-    image: '',
+    image: '../assets/orlando.png',
     posts: [
       {
         id: 3,
@@ -63,7 +63,7 @@ export const cities: Cities[] = [
     id: 3,
     name: 'Phoenix',
     country: 'United States',
-    image: '',
+    image: '../assets/phoenix.png',
     posts: [
       {
         id: 5,
@@ -85,7 +85,7 @@ export const cities: Cities[] = [
     id: 4,
     name: 'Chicago',
     country: 'United States',
-    image: '',
+    image: '../assets/chicago.png',
     posts: [
       {
         id: 7,
