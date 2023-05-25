@@ -2,8 +2,10 @@ nav li {
    display: inline-block;
    list-style-type: none;
    margin: 1rem 1.5rem;
+   
 }
 
 li a {
    text-decoration: none;
+   font-size: 1.3rem;
 }
