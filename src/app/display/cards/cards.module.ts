@@ -7,7 +7,7 @@ import { CardsComponent } from './cards/cards.component';
     CardsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [CardsComponent]
 })
