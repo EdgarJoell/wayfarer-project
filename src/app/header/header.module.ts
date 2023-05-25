@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { LogoComponent } from './logo/logo.component';
 import { NavlinksComponent } from './navlinks/navlinks.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [LogoComponent, NavlinksComponent, SearchBarComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
   exports: [
     LogoComponent, NavlinksComponent, SearchBarComponent
