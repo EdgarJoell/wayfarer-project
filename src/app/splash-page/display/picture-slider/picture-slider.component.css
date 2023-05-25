@@ -1,0 +1,23 @@
+img {
+    max-height: 40rem;
+    min-height: 40rem;
+    width: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.carousel-item {
+    pointer-events: none;
+}
+
+.carousel-inner {
+    pointer-events: none;
+}
+
+.carouselIndicators {
+    pointer-events: none;
+}
+
+.cards-container {
+    margin: 3rem 0;
+}
