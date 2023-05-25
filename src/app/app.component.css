@@ -1,7 +1,7 @@
-.nav-bar {
+/* .nav-bar {
   background-color: lightgray;
   margin-top: -.8rem;
-}
+} */
 
 .nav-container {
   width: 90rem;
@@ -9,4 +9,5 @@
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
+  min-width: 60rem;
 }

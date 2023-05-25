@@ -1,6 +1,8 @@
-#logo {
+/* .logo {
    display: flex;
-}
+   justify-content: center;
+   align-items: center;
+} */
 
 img {
    background-color: black;
