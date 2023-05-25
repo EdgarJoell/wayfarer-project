@@ -6,6 +6,7 @@
     justify-content: center;
     align-content: center;
     gap: 6rem;
+    margin: 3rem;
 }
 
 .card-title {
