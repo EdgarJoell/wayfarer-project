@@ -1,18 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PictureSliderComponent } from './picture-slider/picture-slider.component';
-import { CardsModule } from './cards/cards.module';
-
+import { CardsComponent } from './cards/cards.component';
 
 
 @NgModule({
   declarations: [
-    PictureSliderComponent
+    PictureSliderComponent, CardsComponent
   ],
   imports: [
     CommonModule,
-    CardsModule
   ],
-  exports: [PictureSliderComponent]
+  exports: [PictureSliderComponent, CardsComponent]
 })
 export class DisplayModule { }
