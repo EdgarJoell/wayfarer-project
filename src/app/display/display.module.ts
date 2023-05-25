@@ -3,15 +3,13 @@ import { CommonModule } from '@angular/common';
 import { PictureSliderComponent } from './picture-slider/picture-slider.component';
 import { CardsModule } from './cards/cards.module';
 
-
-
 @NgModule({
   declarations: [
-    PictureSliderComponent
+    PictureSliderComponent,
   ],
   imports: [
     CommonModule,
-    CardsModule
+    CardsModule,
   ],
   exports: [PictureSliderComponent]
 })

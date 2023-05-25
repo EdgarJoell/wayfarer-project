@@ -7,10 +7,12 @@ import { BootstrapOptions } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeaderModule } from './header/header.module';
 import { DisplayModule } from './display/display.module';
+import { HomeButtonComponent } from './home-button/home-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeButtonComponent,
   ],
   imports: [
     BrowserModule,
