@@ -71,7 +71,7 @@ export const posts: Posts[] = [
     username: 'Chicago Person 2',
     userImage: '../assets/chicago.png',
     title: 'Beautiful Skyline',
-    desc: 'Sunsets are may favorite time of day by the lake',
+    desc: 'Sunsets are my favorite by the lake',
     postId: 4,
   },
   {
