@@ -11,6 +11,6 @@ export class HomeButtonComponent {
   constructor(private router: Router) {}
 
   goToHomePage() {
-    this.router.navigate(["/cities"])
+    this.router.navigate(["/cities/1"])
   }
 }
