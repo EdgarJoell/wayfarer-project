@@ -4,7 +4,7 @@ h2 {
 
 #posts-container {
    margin: auto;
-   max-width: 59rem;
+   max-width: 55rem;
    overflow: scroll;
    height: 32rem;
 }

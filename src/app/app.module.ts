@@ -9,10 +9,12 @@ import { HeaderModule } from './header/header.module';
 import { SplashPageModule } from './splash-page/splash-page.module';
 import { AppRoutingModule } from './app-routing.module';
 import { CitiesPageModule } from './cities-page/cities-page.module';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
