@@ -15,3 +15,19 @@ h2 {
    padding-left: 0;
    margin-left: -3rem;
 }
+
+.post-description {
+   height: 9rem;
+   overflow: scroll;
+   border: 1px solid lightgray;
+   border-radius: 20px;
+}
+
+p {
+   font-size: 17pt;
+   margin-left: 1rem;
+}
+
+h5 {
+   font-size: 11pt;
+}
