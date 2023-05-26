@@ -12,6 +12,7 @@ import { posts } from '../../city-page-container/data-posts';
 export class CommentContainerComponent {
   posts = posts;
   formData: any = {
+    id: '',
     //postId: set to paramID
     username: '',
     userImage: '',
@@ -23,10 +24,9 @@ export class CommentContainerComponent {
 
   // make an interface?
   submitForm(formData: NgForm):void {
-    console.log(formData.value)
     // assign the ID to the current page
-    
-    this.formData = { ...formData }
-    console.log("FORM DATA", this.formData)
+    this.formData.id = posts[posts.length -1].id += 1
+    this.formData = { ...formData };
+    console.log(this.formData);
   }
 }
