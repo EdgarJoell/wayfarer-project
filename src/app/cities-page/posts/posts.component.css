@@ -23,6 +23,16 @@ h2 {
    border-radius: 20px;
 }
 
+.flex {
+   display: flex;
+   justify-content: baseline;
+}
+
+h6 {
+   margin-left: 1rem;
+   padding-top: 0.45rem;
+}
+
 p {
    font-size: 17pt;
    margin-left: 1rem;

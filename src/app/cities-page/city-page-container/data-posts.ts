@@ -5,6 +5,7 @@ interface Posts {
   title: string;
   desc: string;
   postId: number;
+  createdAt: string;
 }
 
 export const posts: Posts[] = [
@@ -15,6 +16,7 @@ export const posts: Posts[] = [
     title: 'SF',
     desc: `If you're going to San Francisco Be sure to wear some flowers in your hair`,
     postId: 1,
+    createdAt: new Date().toLocaleDateString(),
   },
   {
     id: 3,
@@ -23,6 +25,7 @@ export const posts: Posts[] = [
     postId: 2,
     title: 'Orlando Three Title',
     desc: 'Orlando Three Desc',
+    createdAt: new Date().toLocaleDateString(),
   },
   {
     id: 4,
@@ -31,6 +34,7 @@ export const posts: Posts[] = [
     title: 'Orlando Four Title',
     desc: 'Orlando Four Desc',
     postId: 2,
+    createdAt: new Date().toLocaleDateString(),
   },
 
   {
@@ -40,6 +44,7 @@ export const posts: Posts[] = [
     title: 'Phoenix 5 Title',
     desc: 'Phoenix 5 Desc',
     postId: 3,
+    createdAt: new Date().toLocaleDateString(),
   },
   {
     id: 6,
@@ -48,6 +53,7 @@ export const posts: Posts[] = [
     title: 'Phoenix 6 Title',
     desc: 'Phoenix 6 Desc',
     postId: 3,
+    createdAt: new Date().toLocaleDateString(),
   },
 
   {
@@ -57,6 +63,7 @@ export const posts: Posts[] = [
     title: 'The Windy City',
     desc: "It's actually not windy!",
     postId: 4,
+    createdAt: new Date().toLocaleDateString(),
   },
   {
     id: 8,
@@ -65,6 +72,7 @@ export const posts: Posts[] = [
     title: 'Best Pizza Around!',
     desc: 'Nothing beats a Chicago style pizza!',
     postId: 4,
+    createdAt: new Date().toLocaleDateString(),
   },
   {
     id: 9,
@@ -73,6 +81,7 @@ export const posts: Posts[] = [
     title: 'Beautiful Skyline',
     desc: 'Sunsets are my favorite by the lake',
     postId: 4,
+    createdAt: new Date().toLocaleDateString(),
   },
   {
     id: 10,
@@ -81,5 +90,6 @@ export const posts: Posts[] = [
     title: 'I saw Batman',
     desc: 'Is this Gotham City? I thought I was in Chicago',
     postId: 4,
+    createdAt: new Date().toLocaleDateString(),
   },
 ];
