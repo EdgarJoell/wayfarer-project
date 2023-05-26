@@ -1,10 +1,10 @@
 .city-info-container {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    /* grid-template-columns: 1fr 1fr; */
     border: 2px solid red;
     width: 65rem;
-    height: 100%;
+    /* height: 100%; */
     font-size: 35px;
     font-weight: 500;
 }
@@ -18,8 +18,8 @@
 
 .city-details {
     grid-area: 1 / 1;
-    width: fit-content;
-    height: fit-content;
+    /* width: fit-content; */
+    /* height: fit-content; */
     margin-top: 2rem;
 }
 
@@ -37,8 +37,8 @@ img {
     grid-area: 1 / 2;
     /* border: 2px solid blue; */
     width: 35rem;
-    height: fit-content;
-    
+    /* height: fit-content; */
+
 }
 
 
@@ -48,8 +48,3 @@ img {
 .city-posts-container {
     grid-area: 2 / span 2;
 }
-
-
-
-
-

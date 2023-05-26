@@ -1,12 +1,25 @@
-<div class="card mb-3" style="max-width: 540px;" *ngFor="let city of cities">
+<a class="card mb-3" style="max-width: 540px;" *ngFor="let city of cities" routerLink="/cities/{{city.id}}">
+    <div class="row g-0 card-container">
+      <div class="col-md-4 city-image-container">
+        <img src="{{ city.image }}" class="img-fluid rounded-start" alt="{{city.name}}">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h3 class="card-title">{{ city.name }}</h3>
+        </div>
+      </div>
+    </div>
+</a>
+
+<!-- <div class="card mb-3" style="max-width: 540px;" >
   <div class="row g-0 card-container">
     <div class="col-md-4 city-image-container">
-      <img src="{{ city.image }}" class="img-fluid rounded-start" alt="{{city.name}}">
+      <img src="{{ city?.image }}" class="img-fluid rounded-start" alt="{{city?.name}}">
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h3 class="card-title">{{ city.name }}</h3>
+        <h3 class="card-title">{{ city?.name }}</h3>
       </div>
     </div>
   </div>
-</div>
+</div> -->

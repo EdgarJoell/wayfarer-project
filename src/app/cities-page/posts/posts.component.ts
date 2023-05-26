@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { cities } from '../city-info/cities';
-
+import { cities } from '../city-info/data-cities';
+import { posts } from '../city-info/data-posts';
 
 @Component({
   selector: 'app-posts',
@@ -9,4 +9,5 @@ import { cities } from '../city-info/cities';
 })
 export class PostsComponent {
   cities = cities;
+  posts = posts;
 }

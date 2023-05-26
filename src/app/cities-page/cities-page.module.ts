@@ -5,6 +5,7 @@ import { CityInfoComponent } from './city-info/city-info.component';
 import { CityPageContainerComponent } from './city-page-container/city-page-container.component';
 import { HeaderModule } from '../header/header.module';
 import { PostsComponent } from './posts/posts.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,7 @@ import { PostsComponent } from './posts/posts.component';
     CityPageContainerComponent,
     PostsComponent,
   ],
-  imports: [CommonModule, HeaderModule],
+  imports: [CommonModule, HeaderModule, AppRoutingModule],
   exports: [CitiesComponent, CityInfoComponent, CityPageContainerComponent],
 })
 export class CitiesPageModule {}
