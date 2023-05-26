@@ -9,10 +9,31 @@ img {
   object-fit: cover;
 }
 
+h2 {
+  margin-left: 3rem;
+}
+
 .col-md-8 {
     margin: auto;
 }
 
+.da-cards {
+  margin-left: 3rem;
+}
+
 .card-title {
     text-align: center;
+}
+
+#cities-list-container {
+  border-radius: 20px;
+  height: 60rem;
+  width: 40rem;
+  border: 2px solid black;
+  padding-top: 2rem;
+}
+
+#list-container {
+  height: 55rem;
+  overflow: scroll;
 }
