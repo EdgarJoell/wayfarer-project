@@ -7,6 +7,7 @@ import { HeaderModule } from '../header/header.module';
 import { PostsComponent } from './posts/posts.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { CommentContainerComponent } from './posts/comment-container/comment-container.component';
+import { PostPageComponent } from './posts/post-page/post-page.component';
 
 @NgModule({
   declarations: [
@@ -14,9 +15,10 @@ import { CommentContainerComponent } from './posts/comment-container/comment-con
     CityInfoComponent,
     CityPageContainerComponent,
     PostsComponent,
-    CommentContainerComponent
+    CommentContainerComponent,
+    PostPageComponent
   ],
   imports: [CommonModule, HeaderModule, AppRoutingModule],
-  exports: [CitiesComponent, CityInfoComponent, CityPageContainerComponent, PostsComponent, CommentContainerComponent],
+  exports: [CitiesComponent, CityInfoComponent, CityPageContainerComponent, PostsComponent, CommentContainerComponent, PostPageComponent],
 })
 export class CitiesPageModule {}
