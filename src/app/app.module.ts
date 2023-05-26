@@ -6,6 +6,9 @@ import { HeaderModule } from './header/header.module';
 import { SplashPageModule } from './splash-page/splash-page.module';
 import { AppRoutingModule } from './app-routing.module';
 import { CitiesPageModule } from './cities-page/cities-page.module';
+import { SearchService } from './services/search.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -17,8 +20,9 @@ import { CitiesPageModule } from './cities-page/cities-page.module';
     SplashPageModule,
     CitiesPageModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

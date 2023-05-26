@@ -1,8 +1,8 @@
 <form class="form-inline">
-  <input
+  <input name="title" (keyup)="findPostId(id)" [(ngModel)]="id"
     class="form-control mr-sm-2 search-bar"
     type="search"
-    placeholder="Search for cities..."
+    placeholder="Search for posts..."
   />
   <button class="btn btn-primary " type="submit">
     Search
