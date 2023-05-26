@@ -1,0 +1,17 @@
+h2 {
+   margin-left: 3rem;
+}
+
+#posts-container {
+   margin: auto;
+   max-width: 59rem;
+   overflow: scroll;
+   height: 32rem;
+}
+
+.individual-posts {
+   width: 59rem;
+   height: 15rem;
+   padding-left: 0;
+   margin-left: -3rem;
+}
