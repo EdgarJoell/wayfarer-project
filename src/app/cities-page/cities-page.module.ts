@@ -6,7 +6,7 @@ import { CityPageContainerComponent } from './city-page-container/city-page-cont
 import { HeaderModule } from '../header/header.module';
 import { PostsComponent } from './posts/posts.component';
 import { AppRoutingModule } from '../app-routing.module';
-import { CommentContainerComponent } from '../comment-container/comment-container.component';
+import { CommentContainerComponent } from './posts/comment-container/comment-container.component';
 
 @NgModule({
   declarations: [
