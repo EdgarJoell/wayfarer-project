@@ -3,14 +3,15 @@
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     border: 2px solid red;
-    width: 50rem;
+    width: 65rem;
     height: 800px;
 }
 
 .city-detail-container {
     display: flex;
-    grid-area: 1 / span 2;
     justify-content: space-between;
+    grid-area: 1 / span 2;
+    
 }
 
 img {
