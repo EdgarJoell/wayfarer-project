@@ -1,78 +1,85 @@
 interface Posts {
-    id: number,
-    userName: string,
-    userImage: string,
-    postId: number,
-    postTitle: string,
-    postDesc: string
+  id: number;
+  userName: string;
+  userImage: string;
+  title: string;
+  desc: string;
+  postId: number;
 }
 
 export const posts: Posts[] = [
-    {
-        id: 1,
-        userName: 'One',
-        userImage: '',
-        postId: 1,
-        postTitle: 'Post Title 1 for Post ID 1',
-        postDesc: 'Post Desc 1 for Post ID 1',
-    },
-    {
-        id: 2,
-        userName: 'Two',
-        userImage: '',
-        postId: 1,
-        postTitle: 'Post Title 2 for Post ID 1',
-        postDesc: 'Post Desc 2 for Post ID 1',
-    },
+  {
+    id: 1,
+    userName: 'Scott M',
+    userImage: '',
+    title: 'SF',
+    desc: `If you're going to San Francisco Be sure to wear some flowers in your hair`,
+    postId: 1,
+  },
+  {
+    id: 3,
+    userName: 'Edgar Three',
+    userImage: '',
+    postId: 2,
+    title: 'Orlando Three Title',
+    desc: 'Orlando Three Desc',
+  },
+  {
+    id: 4,
+    userName: 'Four',
+    userImage: '',
+    title: 'Orlando Four Title',
+    desc: 'Orlando Four Title',
+    postId: 2,
+  },
 
-    {
-        id: 3,
-        userName: 'Edgar Three',
-        userImage: '',
-        postId: 2,
-        postTitle: 'Post Title 3 for Post ID 2',
-        postDesc: 'Post Desc 3 for Post ID 2',
-    },
-    {
-        id: 4,
-        userName: 'Four',
-        userImage: '',
-        postId: 2,
-        postTitle: 'Post Title 4 for Post ID 2',
-        postDesc: 'Post Desc 4 for Post ID 2',
-    },
+  {
+    id: 5,
+    userName: 'Jay',
+    userImage: '',
+    title: 'Phoenix 5 Title',
+    desc: 'Phoenix 5 Desc',
+    postId: 3,
+  },
+  {
+    id: 6,
+    userName: 'Six',
+    userImage: '',
+    title: 'Phoenix 6 Title',
+    desc: 'Phoenix 6 Desc',
+    postId: 3,
+  },
 
-    {
-        id: 5,
-        userName: 'JayPadillaDEV Five',
-        userImage: '',
-        postId: 3,
-        postTitle: 'Post Title 5 for Post ID 3',
-        postDesc: 'Post Desc 5 for Post ID 3',
-    },
-    {
-        id: 6,
-        userName: 'Six',
-        userImage: '',
-        postId: 3,
-        postTitle: 'Post Title 6 for Post ID 3',
-        postDesc: 'Post Desc 6 for Post ID 3',
-    },
-
-    {
-        id: 7,
-        userName: 'KC Seven',
-        userImage: '',
-        postId: 4,
-        postTitle: 'Post Title 7 for Post ID 4',
-        postDesc: 'Post Desc 7 for Post ID 4',
-    },
-    {
-        id: 8,
-        userName: 'Eight',
-        userImage: '',
-        postId: 4,
-        postTitle: 'Post Title 8 for Post ID 4',
-        postDesc: 'Post Desc 8 for Post ID 4',
-    },
-]
+  {
+    id: 7,
+    userName: 'KC',
+    userImage: '',
+    title: 'The Windy City',
+    desc: "It's actually not windy!",
+    postId: 4,
+  },
+  {
+    id: 8,
+    userName: 'Chicago Person 1',
+    userImage: '',
+    title: 'Best Pizza Around!',
+    desc: 'Nothing beats a Chicago style pizza!',
+    postId: 4,
+  },
+  {
+    id: 9,
+    userName: 'Chicago Person 2',
+    userImage: '',
+    title: 'Beautiful Skyline',
+    desc: 'Sunsets are may favorite time of day by the lake',
+    postId: 4,
+  },
+  {
+    id: 10,
+    userName: 'Bruce Wayne',
+    userImage: '',
+    title: 'I saw Batman',
+    desc: 'Is this Gotham City? I thought I was in Chicago',
+    postId: 4,
+  },
+];
