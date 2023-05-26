@@ -1,17 +1,20 @@
-<div>
-    <h2>Posts</h2>
-    <div *ngFor="let post of postArr">
-        <div class="user-profile-image"><img src="" alt="">User profile image</div>
-        <div class="user-profile-"></div>
-        <div class="user-post-title">{{ post.title }}</div>
-        <div class="user-post-desc">{{ post.desc }}</div>
+<h2>Posts</h2>
+
+<div class="card mb-3" style="max-width: 540px">
+  <div class="row g-0" *ngFor="let post of postArr">
+    <div class="col-md-4">
+      <img
+        src="{{ post.userImage }}"
+        class="img-fluid rounded-start"
+        alt="..."
+      />
     </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <p class="card-text">{{ post.desc }}</p>
+        <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
+      </div>
+    </div>
+  </div>
 </div>
-<!-- <div>
-    <h2>Posts</h2>
-    <div>
-        <div class="user-profile-image"><img src="" alt="">User profile image</div>
-        <div class="user-post-title">{{ post.title }}</div>
-        <div class="user-post-desc">{{ post.desc }}</div>
-    </div>
-</div> -->

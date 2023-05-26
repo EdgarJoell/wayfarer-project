@@ -9,7 +9,6 @@ import { posts } from '../city-page-container/data-posts';
   styleUrls: ['./posts.component.css'],
 })
 export class PostsComponent implements OnInit {
-  // cities = cities;
   posts = posts
   city: any;
   postArr: any;
