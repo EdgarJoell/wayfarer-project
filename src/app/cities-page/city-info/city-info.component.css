@@ -1,0 +1,39 @@
+.city-info-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid red;
+    width: 50rem;
+    height: 800px;
+}
+
+.city-detail-container {
+    display: flex;
+    grid-area: 1 / span 2;
+    justify-content: space-between;
+}
+
+img {
+    max-width: 300px;
+    max-height: auto;
+}
+
+.city-details {
+    grid-area: 1 / 1;
+    width: fit-content;
+    height: fit-content;
+}
+
+.city-image {
+    grid-area: 1 / 2;
+    border: 2px solid blue;
+}
+
+.city-posts-container {
+    grid-area: 2 / span 2;
+}
+
+
+
+
+
