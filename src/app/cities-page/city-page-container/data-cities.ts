@@ -31,4 +31,22 @@ export const cities: Cities[] = [
     country: 'United States',
     image: '../assets/chicago.png',
   },
+  {
+    id: 5,
+    name: 'Los Angeles',
+    country: 'United States',
+    image: '../assets/chicago.png',
+  },
+  {
+    id: 6,
+    name: 'Atlanta',
+    country: 'United States',
+    image: '../assets/chicago.png',
+  },
+  {
+    id: 7,
+    name: 'New York',
+    country: 'United States',
+    image: '../assets/chicago.png',
+  },
 ];

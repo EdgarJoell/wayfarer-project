@@ -2,6 +2,8 @@
     display: grid;
     border: 2px solid red;
     width: 65rem;
+    height: 60rem;
+    border-radius: 20px;
     font-size: 35px;
     font-weight: 500;
 }
