@@ -9,6 +9,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { CommentContainerComponent } from './posts/comment-container/comment-container.component';
 import { FormsModule } from '@angular/forms';
 import { PostPageComponent } from './posts/post-page/post-page.component';
+import { PostsService } from '../services/posts.service';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { PostPageComponent } from './posts/post-page/post-page.component';
     CommentContainerComponent,
     PostPageComponent
   ],
+  providers: [PostsService],
   imports: [CommonModule, HeaderModule, AppRoutingModule, FormsModule],
   exports: [CitiesComponent, CityInfoComponent, CityPageContainerComponent, PostsComponent, CommentContainerComponent, PostPageComponent],
 })
