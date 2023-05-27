@@ -14,10 +14,11 @@ export class SearchBarComponent implements OnInit{
   post: any;
   posts = posts;
   searchResults: any[] = [];
-
   searchSubject = new Subject();
 
   constructor(private searchService: SearchService) {}
+
+
 
   findPostId(id: any) {
   this.searchResults = [];
