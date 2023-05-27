@@ -18,18 +18,10 @@ export class CommentContainerComponent implements OnInit {
     userImage: '',
     title: '',
     desc: '',
+    createdAt: new Date().toLocaleDateString()
   };
 
   constructor(private activeRoute: ActivatedRoute) {}
-
-  // make an interface?
-  submitForm(formData: NgForm): void {
-    // assign the ID to the current page
-    this.formData.id = posts[posts.length - 1].id += 1;
-
-    this.formData = { ...formData };
-    console.log(this.formData);
-  }
 
   ngOnInit(): void {
     this.activeRoute.paramMap.subscribe((params) => {
@@ -38,5 +30,11 @@ export class CommentContainerComponent implements OnInit {
         return post.id === parseInt(paramId);
       })?.id;
     });
+  }
+
+  submitForm(formData: NgForm): void {
+    this.formData.id = posts[posts.length - 1].id += 1;
+    this.formData = { ...formData };
+    console.log(this.formData);
   }
 }
