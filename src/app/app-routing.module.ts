@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SplashComponent } from './splash-page/splash/splash.component';
 import { CityPageContainerComponent } from './cities-page/city-page-container/city-page-container.component';
 import { PostPageComponent } from './cities-page/posts/post-page/post-page.component';
+import { ContactComponent } from './contact-page/contact/contact.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'posts/:id',
     component: PostPageComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
   }
 ];
 
