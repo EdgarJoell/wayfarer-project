@@ -36,7 +36,6 @@ export const posts: Posts[] = [
     postId: 2,
     createdAt: new Date().toLocaleDateString(),
   },
-
   {
     id: 5,
     username: 'Jay',
