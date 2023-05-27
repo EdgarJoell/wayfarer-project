@@ -39,7 +39,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form #postsForm="ngForm" (ngSubmit)="submitForm(formData)">
+        <form #postsForm="ngForm" >
           <div class="form-row">
             <div class="col-sm-10">
               <input
@@ -92,7 +92,7 @@
               Close
             </button>
             <!-- adds data -->
-            <button type="submit" class="btn btn-primary">Comment</button>
+            <button type="submit" (click)="submitForm(formData)" class="btn btn-primary">Comment</button>
           </div>
         </form>
       </div>

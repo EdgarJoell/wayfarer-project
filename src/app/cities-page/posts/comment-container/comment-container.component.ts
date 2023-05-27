@@ -37,6 +37,20 @@ export class CommentContainerComponent implements OnInit {
     this.formData.id = this.posts[this.posts.length - 1].id + 1;
     this.formData = { ...formData };
     this.postService.addPost(this.formData)
-    console.log(this.postService)
+    console.log(this.formData)
+
+    // close modal
+    this.closeModal()
+  }
+
+  closeModal() {
+    this.formData = {
+      id: '',
+      postId: '',
+      username: '',
+      userImage: '',
+      title: '',
+      desc: '',
+    };
   }
 }
