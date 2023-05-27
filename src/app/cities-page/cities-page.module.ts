@@ -8,6 +8,7 @@ import { PostsComponent } from './posts/posts.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { CommentContainerComponent } from './posts/comment-container/comment-container.component';
 import { FormsModule } from '@angular/forms';
+import { PostPageComponent } from './posts/post-page/post-page.component';
 
 @NgModule({
   declarations: [
@@ -15,9 +16,10 @@ import { FormsModule } from '@angular/forms';
     CityInfoComponent,
     CityPageContainerComponent,
     PostsComponent,
-    CommentContainerComponent
+    CommentContainerComponent,
+    PostPageComponent
   ],
   imports: [CommonModule, HeaderModule, AppRoutingModule, FormsModule],
-  exports: [CitiesComponent, CityInfoComponent, CityPageContainerComponent, PostsComponent, CommentContainerComponent],
+  exports: [CitiesComponent, CityInfoComponent, CityPageContainerComponent, PostsComponent, CommentContainerComponent, PostPageComponent],
 })
 export class CitiesPageModule {}

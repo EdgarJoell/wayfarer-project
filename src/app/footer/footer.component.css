@@ -1,0 +1,29 @@
+#footer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 10rem;
+   width: 100%;
+}
+
+.credits {
+   display: flex;
+   flex-direction: column;
+}
+
+img {
+   width: 10rem;
+   height: 10rem;
+   margin-right: 2rem;
+}
+
+h3 {
+   width: 10rem;
+   color: white;
+}
+
+p {
+   width: 25rem;
+   color: white;
+   margin-left: 4rem;
+}

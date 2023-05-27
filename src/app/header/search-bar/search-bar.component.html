@@ -1,10 +1,21 @@
 <form class="form-inline">
-  <input
+  <input name="title" (keyup)="findPostId(id)" [(ngModel)]="id"
     class="form-control mr-sm-2 search-bar"
     type="search"
-    placeholder="Search for cities..."
+    placeholder="Search for posts..."
   />
   <button class="btn btn-primary " type="submit">
     Search
   </button>
 </form>
+
+<main>
+  <a [routerLink]="['/']">
+    <header class="brand-name">
+      <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
+    </header>
+  </a>
+  <section class="content">
+    <router-outlet></router-outlet>
+  </section>
+</main>

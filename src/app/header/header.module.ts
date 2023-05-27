@@ -4,12 +4,14 @@ import { LogoComponent } from './logo/logo.component';
 import { NavlinksComponent } from './navlinks/navlinks.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [LogoComponent, NavlinksComponent, SearchBarComponent],
+  declarations: [LogoComponent, NavlinksComponent, SearchBarComponent], 
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   exports: [
     LogoComponent, NavlinksComponent, SearchBarComponent
