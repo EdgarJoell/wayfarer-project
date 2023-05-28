@@ -9,8 +9,6 @@ import { PostsService } from 'src/app/services/posts.service';
   styleUrls: ['./comment-container.component.css'],
 })
 export class CommentContainerComponent implements OnInit {
-  @ViewChild('closeButton') closeButton: any;
-
   posts = this.postService.getPosts();
   formData: any = {
     id: '',
@@ -39,6 +37,7 @@ export class CommentContainerComponent implements OnInit {
       })?.id;
     });
     this.postService.addPost(this.formData);
+
     console.log(this.formData);
 
     // close modal
@@ -54,6 +53,8 @@ export class CommentContainerComponent implements OnInit {
       title: '',
       desc: '',
     };
+
+    // data dismiss=modal
   }
 
 }
