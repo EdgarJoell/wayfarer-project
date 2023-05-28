@@ -11,7 +11,6 @@ import { posts } from 'src/app/cities-page/city-page-container/data-posts';
   styleUrls: ['./search-bar.component.css'],
 })
 export class SearchBarComponent implements OnInit {
-  // id: string = ''
   searchResults: any[] = [];
   searchSubject = new Subject();
   post: any;
@@ -38,25 +37,8 @@ export class SearchBarComponent implements OnInit {
   }
 
   selectPost(post: any) {
-    // Do something with the selected post
     console.log(post);
   }
-
-  // findPostId(id: any) {
-  // this.searchResults = [];
-
-  //   if(id){
-  //     this.searchResults = this.posts.filter(post => post.id === parseInt(id))
-  //   }
-  // }
-
-  // searchPosts() {
-  //   const url = `https://localhost:4200/posts?title=${this.searchQuery}`;
-  //   this.http.get<any[]>(url).subscribe((data) => {
-  //     this.posts = data;
-  //     console.log(this.posts);
-  //   });
-  // }
 
   ngOnInit(): void {
     this.searchSubject
