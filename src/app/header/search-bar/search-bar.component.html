@@ -1,16 +1,17 @@
 <div>
   <form class="form-inline" (input)="filterPosts()">
     <input
-      [(ngModel)]="searchText"
+      [(ngModel)]="searchBarText"
       class="form-control mr-sm-2 search-bar"
       type="search"
       placeholder="Search for posts..."
-      name="searchText"
+      name="searchBarText"
     />
-    <button class="btn btn-primary" type="submit">Search</button>
+    <!-- <button class="btn btn-primary" type="submit">Search</button> -->
   </form>
-
-  <div class="search-results d-flex flex-column" *ngIf="searchText.trim()">
+  <!-- The trim() method is removing empty white space to avoid API calls for empty spaces -->
+  <div class="search-results d-flex flex-column" *ngIf="searchBarText.trim()">
+    <!-- Create a list of links for each search result -->
     <a
       class="results-list"
       *ngFor="let post of filteredPosts"
@@ -18,6 +19,6 @@
       routerLink="/posts/{{ post.id }}"
     >{{ post.title }}
     </a>
-    <div *ngIf="filteredPosts.length === 0" class="no-results-text">No results found.</div>
+    <div *ngIf="filteredPosts.length === 0" class="no-results-text">No results found</div>
   </div>
 </div>

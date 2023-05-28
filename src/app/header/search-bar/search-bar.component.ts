@@ -7,20 +7,26 @@ import { posts } from '../../cities-page/city-page-container/data-posts';
   styleUrls: ['./search-bar.component.css'],
 })
 export class SearchBarComponent {
-  post: any;
-  searchText: string = '';
+  // Two-way binding with the search input
+  searchBarText: string = '';
+  // Holds filtered results
   filteredPosts: any[] = [];
 
   filterPosts() {
-    this.filteredPosts = this.searchText
-      ? posts.filter((post) =>
-          post.title.toLowerCase().includes(this.searchText.toLowerCase())
-        ) : [];
+    // Assigns the filteredPosts array with the filtered results from the user's input made in the two-way binding through the searchBarText initializing
+    this.filteredPosts = this.searchBarText
+      ? // filter through the list of posts in our database and return search results by the title of the post from the searchBarText value
+        posts.filter(
+          (post) =>
+            // compare the user's input values without worrying about what case is entered in the search box
+            post.title.toLowerCase().includes(this.searchBarText.toLowerCase())
+          // returns an empty array if there are no posts to filter through in the database
+        )
+      : [];
   }
 
   // Clears search bar text after a user clicks on a link which also removes the dropdown list
   clearSearchBar() {
-    this.searchText = '';
+    this.searchBarText = '';
   }
-
 }
