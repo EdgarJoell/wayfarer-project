@@ -9,13 +9,16 @@
     />
     <button class="btn btn-primary" type="submit">Search</button>
   </form>
-  <div class="search-results d-flex flex-column" *ngIf="searchText">
+
+  <div class="search-results d-flex flex-column" *ngIf="searchText.trim()">
     <a
       class="results-list"
       *ngFor="let post of filteredPosts"
       routerLink="/posts/{{ post.id }}"
-    >
-      {{ post.title }}
+    >{{ post.title }}
     </a>
   </div>
 </div>
+
+<!-- drop down should go away after clicking a link -->
+<!-- no results should be un-clickable -->
