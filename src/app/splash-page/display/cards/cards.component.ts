@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent {
+  // Website attention grabbers
     cards: any = [
       {
         header: "Adventure",

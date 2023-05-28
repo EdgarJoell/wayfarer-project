@@ -10,6 +10,7 @@ export class HomeButtonComponent {
 
   constructor(private router: Router) {}
 
+  // Directs the user to the first result of the cities list
   goToHomePage() {
     this.router.navigate(["/cities/1"])
   }
