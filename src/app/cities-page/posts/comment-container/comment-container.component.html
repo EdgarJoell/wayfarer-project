@@ -91,14 +91,8 @@
               Close
             </button>
             <!-- adds data -->
-            <button
-            
-              type="submit"
-              data-toggle="modal"
-              class="btn btn-primary"
-              id="closeModal"
-              #closeButton
-            >Comment</button>
+            <button type="submit" (click)="submitForm(formData)" class="btn btn-primary"  data-dismiss="modal">Comment</button>
+
           </div>
         </form>
       </div>

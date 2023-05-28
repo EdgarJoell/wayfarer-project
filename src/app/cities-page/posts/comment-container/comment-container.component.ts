@@ -3,12 +3,14 @@ import { NgForm } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { PostsService } from 'src/app/services/posts.service';
 
+
 @Component({
   selector: 'app-comment-container',
   templateUrl: './comment-container.component.html',
   styleUrls: ['./comment-container.component.css'],
 })
 export class CommentContainerComponent implements OnInit {
+
   posts = this.postService.getPosts();
   formData: any = {
     id: '',
@@ -36,15 +38,18 @@ export class CommentContainerComponent implements OnInit {
         return post.id === parseInt(paramId);
       })?.id;
     });
-    this.postService.addPost(this.formData);
 
-    console.log(this.formData);
+    this.formData = { ...formData };
+    this.postService.addPost(this.formData)
+    
+    console.log(this.formData)
 
     // close modal
     this.closeModal();
   }
 
-  closeModal() {
+  closeModal(): void {
+    
     this.formData = {
       id: '',
       postId: '',
@@ -53,8 +58,5 @@ export class CommentContainerComponent implements OnInit {
       title: '',
       desc: '',
     };
-
-    // data dismiss=modal
   }
-
 }
