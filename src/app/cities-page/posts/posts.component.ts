@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-// import { posts } from '../city-page-container/data-posts';
-import { PostsService } from 'src/app/services/posts.service';
+import { PostsService } from '../../services/posts.service';
 
 @Component({
   selector: 'app-posts',
