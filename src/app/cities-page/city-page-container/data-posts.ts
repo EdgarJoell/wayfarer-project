@@ -32,7 +32,7 @@ export const posts: Posts[] = [
     username: 'Orlando B.',
     userImage: '../assets/user-regular.svg',
     title: 'I was named after this city',
-    desc: 'Come vist',
+    desc: 'Come visit',
     postId: 2,
     createdAt: new Date().toLocaleDateString(),
   },
