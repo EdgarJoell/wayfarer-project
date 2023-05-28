@@ -1,12 +1,11 @@
-<!-- A lot of class repitition -->
-<ul class="nav justify-content-end">
+<ul class="nav nav-pills justify-content-end">
   <li class="nav-item">
-    <a class="nav-link text-light active" routerLink="">HOME</a>
+    <a class="nav-link text-light" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">HOME</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link text-light " routerLink="/cities/1">CITIES</a>
+    <a class="nav-link text-light" routerLink="/cities/1" routerLinkActive="active">CITIES</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link text-light " routerLink="#">CONTACT</a>
+    <a class="nav-link text-light" routerLink="#" routerLinkActive="active">CONTACT</a>
   </li>
 </ul>

@@ -19,7 +19,7 @@ export const posts: Posts[] = [
     createdAt: new Date().toLocaleDateString(),
   },
   {
-    id: 3,
+    id: 2,
     username: 'Edgar Three',
     userImage: '../assets/orlando.png',
     postId: 2,
@@ -28,7 +28,7 @@ export const posts: Posts[] = [
     createdAt: new Date().toLocaleDateString(),
   },
   {
-    id: 4,
+    id: 3,
     username: 'Four',
     userImage: '../assets/orlando.png',
     title: 'Orlando Four Title',
@@ -37,7 +37,7 @@ export const posts: Posts[] = [
     createdAt: new Date().toLocaleDateString(),
   },
   {
-    id: 5,
+    id: 4,
     username: 'Jay',
     userImage: '../assets/phoenix.png',
     title: 'Phoenix 5 Title',
@@ -46,7 +46,7 @@ export const posts: Posts[] = [
     createdAt: new Date().toLocaleDateString(),
   },
   {
-    id: 6,
+    id: 5,
     username: 'Six',
     userImage: '../assets/phoenix.png',
     title: 'Phoenix 6 Title',
@@ -56,7 +56,7 @@ export const posts: Posts[] = [
   },
 
   {
-    id: 7,
+    id: 6,
     username: 'KC',
     userImage: '../assets/chicago.png',
     title: 'The Windy City',
@@ -65,7 +65,7 @@ export const posts: Posts[] = [
     createdAt: new Date().toLocaleDateString(),
   },
   {
-    id: 8,
+    id: 7,
     username: 'Chicago Person 1',
     userImage: '../assets/chicago.png',
     title: 'Best Pizza Around!',
@@ -74,7 +74,7 @@ export const posts: Posts[] = [
     createdAt: new Date().toLocaleDateString(),
   },
   {
-    id: 9,
+    id: 8,
     username: 'Chicago Person 2',
     userImage: '../assets/chicago.png',
     title: 'Beautiful Skyline',
@@ -83,7 +83,7 @@ export const posts: Posts[] = [
     createdAt: new Date().toLocaleDateString(),
   },
   {
-    id: 10,
+    id: 9,
     username: 'Bruce Wayne',
     userImage: '../assets/chicago.png',
     title: 'I saw Batman',

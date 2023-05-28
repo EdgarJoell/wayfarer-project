@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { posts } from 'src/app/cities-page/city-page-container/data-posts';
+// import { posts } from 'src/app/cities-page/city-page-container/data-posts';
 import { Subject, debounceTime, distinctUntilChanged } from 'rxjs';
 import { SearchService } from 'src/app/services/search.service';
+import { PostsService } from 'src/app/services/posts.service';
 
 
 @Component({
@@ -12,11 +13,11 @@ import { SearchService } from 'src/app/services/search.service';
 export class SearchBarComponent implements OnInit{
   id: string = ''
   post: any;
-  posts = posts;
+  posts = this.postService.getPosts();
   searchResults: any[] = [];
   searchSubject = new Subject();
 
-  constructor(private searchService: SearchService) {}
+  constructor(private searchService: SearchService, private postService: PostsService) {}
 
 
 
