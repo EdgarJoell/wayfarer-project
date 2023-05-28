@@ -1,12 +1,16 @@
-<form class="form-inline">
-  <input name="title" (keyup)="findPostId(id)" [(ngModel)]="id"
+<form class="form-inline" (input)="filterPosts()">
+  <input
+    [(ngModel)]="searchText"
     class="form-control mr-sm-2 search-bar"
     type="search"
     placeholder="Search for posts..."
+    name="searchText"
   />
-  <button class="btn btn-primary " type="submit">
-    Search
-  </button>
+
+  <button class="btn btn-primary" type="submit">Search</button>
+  <div class="dropdown-menu">
+      <a class="dropdown-item" *ngFor="let post of filteredPosts" (click)="selectPost(post)">{{ post.title }}</a>
+    </div>
 </form>
 
 <!-- <main>
