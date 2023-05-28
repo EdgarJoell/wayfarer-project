@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { PostsService } from 'src/app/services/posts.service';
-import { posts } from 'src/app/cities-page/city-page-container/data-posts';
+// import { PostsService } from 'src/app/services/posts.service';
+
+// import { posts } from 'src/app/cities-page/city-page-container/data-posts';
+
+import { PostsService } from '../../services/posts.service';
+import { posts } from '../../cities-page/city-page-container/data-posts';
 
 // import { Subject, debounceTime, distinctUntilChanged } from 'rxjs';
 // import { SearchService } from 'src/app/services/search.service';
@@ -34,6 +38,10 @@ export class SearchBarComponent implements OnInit {
       this.filteredPosts.push({ title: 'No results' });
     }
     console.log(this.filteredPosts);
+  }
+
+  clearSearchBar() {
+    this.searchText = ''
   }
 
   ngOnInit(): void {}

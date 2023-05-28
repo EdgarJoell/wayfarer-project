@@ -14,6 +14,7 @@
     <a
       class="results-list"
       *ngFor="let post of filteredPosts"
+      (click)="clearSearchBar()"
       routerLink="/posts/{{ post.id }}"
     >{{ post.title }}
     </a>
