@@ -1,25 +1,22 @@
-<form class="form-inline" (input)="filterPosts()">
-  <input
-    [(ngModel)]="searchText"
-    class="form-control mr-sm-2 search-bar"
-    type="search"
-    placeholder="Search for posts..."
-    name="searchText"
-  />
+<div>
+  <form class="form-inline" (input)="filterPosts()">
+    <input
+      [(ngModel)]="searchText"
+      class="form-control mr-sm-2 search-bar"
+      type="search"
+      placeholder="Search for posts..."
+      name="searchText"
 
-  <button class="btn btn-primary" type="submit">Search</button>
-  <div class="dropdown-menu">
-      <a class="dropdown-item" *ngFor="let post of filteredPosts" (click)="selectPost(post)">{{ post.title }}</a>
-    </div>
-</form>
-
-<!-- <main>
-  <a [routerLink]="['/']">
-    <header class="brand-name">
-      <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
-    </header>
-  </a>
-  <section class="content">
-    <router-outlet></router-outlet>
-  </section>
-</main> -->
+    />
+    <button class="btn btn-primary" type="submit">Search</button>
+  </form>
+  <div class="search-results d-flex flex-column">
+    <a
+      *ngFor="let post of filteredPosts"
+      (click)="selectPost(post)"
+      routerLink="/posts/{{ post.id }}"
+    >
+      {{ post.title }}
+    </a>
+  </div>
+</div>

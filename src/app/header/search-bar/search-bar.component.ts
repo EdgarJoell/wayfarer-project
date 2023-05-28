@@ -20,6 +20,7 @@ export class SearchBarComponent implements OnInit {
 
   searchText: string = '';
   filteredPosts: any[] = [];
+  isSearchActive: boolean=false;
 
   constructor(
     private searchService: SearchService,
@@ -41,13 +42,13 @@ export class SearchBarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.searchSubject
-      .pipe(debounceTime(1000), distinctUntilChanged())
-      .subscribe((id) => {
-        this.searchService.getPostPageById(id).subscribe((res) => {
-          console.log(res);
-          this.post = res;
-        });
-      });
+    // this.searchSubject
+    //   .pipe(debounceTime(1000), distinctUntilChanged())
+    //   .subscribe((id) => {
+    //     this.searchService.getPostPageById(id).subscribe((res) => {
+    //       console.log(res);
+    //       this.post = res;
+    //     });
+    //   });
   }
 }
