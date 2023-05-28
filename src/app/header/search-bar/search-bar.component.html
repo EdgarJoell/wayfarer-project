@@ -6,14 +6,13 @@
       type="search"
       placeholder="Search for posts..."
       name="searchText"
-
     />
     <button class="btn btn-primary" type="submit">Search</button>
   </form>
-  <div class="search-results d-flex flex-column">
+  <div class="search-results d-flex flex-column" *ngIf="searchText">
     <a
+      class="results-list"
       *ngFor="let post of filteredPosts"
-      (click)="selectPost(post)"
       routerLink="/posts/{{ post.id }}"
     >
       {{ post.title }}

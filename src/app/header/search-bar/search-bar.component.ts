@@ -12,15 +12,14 @@ import { posts } from 'src/app/cities-page/city-page-container/data-posts';
 })
 export class SearchBarComponent implements OnInit {
   searchResults: any[] = [];
-  searchSubject = new Subject();
-  post: any;
-
-  searchQuery: string = '';
   posts = this.postService.getPosts();
-
+  post: any;
   searchText: string = '';
   filteredPosts: any[] = [];
-  isSearchActive: boolean=false;
+
+  // searchSubject = new Subject();
+  // searchQuery: string = '';
+  // isSearchActive: boolean=false;
 
   constructor(
     private searchService: SearchService,
@@ -37,9 +36,11 @@ export class SearchBarComponent implements OnInit {
       console.log(this.filteredPosts);
   }
 
-  selectPost(post: any) {
-    console.log(post);
-  }
+  // selectPost(post: any) {
+  //   console.log(post);
+  // }
+
+  
 
   ngOnInit(): void {
     // this.searchSubject
