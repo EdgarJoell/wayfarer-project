@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './city-page-container.component.html',
   styleUrls: ['./city-page-container.component.css']
 })
-export class CityPageContainerComponent {
-
-}
+export class CityPageContainerComponent {}

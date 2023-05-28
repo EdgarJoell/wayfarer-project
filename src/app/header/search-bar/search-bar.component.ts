@@ -1,60 +1,37 @@
-import { Component, OnInit } from '@angular/core';
-import { PostsService } from 'src/app/services/posts.service';
-import { posts } from 'src/app/cities-page/city-page-container/data-posts';
-
-// import { Subject, debounceTime, distinctUntilChanged } from 'rxjs';
-// import { SearchService } from 'src/app/services/search.service';
-// import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { PostsService } from '../../services/posts.service';
+PostsService
 
 @Component({
   selector: 'app-search-bar',
   templateUrl: './search-bar.component.html',
   styleUrls: ['./search-bar.component.css'],
 })
-export class SearchBarComponent implements OnInit {
-  posts = this.postService.getPosts();
-  post: any;
-  searchText: string = '';
+export class SearchBarComponent {
+  // Two-way binding with the search input
+  searchBarText: string = '';
+  // Holds filtered results
   filteredPosts: any[] = [];
+  // PostsService to retrieve all posts in the database and assigned to the private variable posts
+  private posts = this.postsService.getPosts()
 
-  constructor(
-    private postService: PostsService
-    // private searchService: SearchService,
-    // private http: HttpClient
-  ) {}
+  constructor(private postsService: PostsService) {}
 
   filterPosts() {
-    this.filteredPosts = this.searchText
-      ? posts.filter((post) =>
-          post.title.toLowerCase().includes(this.searchText.toLowerCase())
+    // Assigns the filteredPosts array with the filtered results from the user's input made in the two-way binding through the searchBarText initializing
+    this.filteredPosts = this.searchBarText
+      ? // filter through the list of posts in our database and return search results by the title of the post from the searchBarText value
+        this.posts.filter(
+          (post) =>
+            // compare the user's input values without worrying about what case is entered in the search box
+            post.title.toLowerCase().includes(this.searchBarText.toLowerCase())
+          // returns an empty array if there are no posts to filter through in the database
         )
       : [];
-
-    if (this.filteredPosts.length === 0) {
-      this.filteredPosts.push({ title: 'No results' });
-    }
-    console.log(this.filteredPosts);
   }
 
-  ngOnInit(): void {}
+  // Clears search bar text after a user clicks on a link which also removes the dropdown list
+  clearSearchBar() {
+    this.searchBarText = '';
+  }
 }
-
-// ngOnInit(): void {
-// this.searchSubject
-//   .pipe(debounceTime(1000), distinctUntilChanged())
-//   .subscribe((id) => {
-//     this.searchService.getPostPageById(id).subscribe((res) => {
-//       console.log(res);
-//       this.post = res;
-//     });
-//   });
-// }
-
-// selectPost(post: any) {
-//   console.log(post);
-// }
-
-// searchSubject = new Subject();
-// searchQuery: string = '';
-// isSearchActive: boolean=false;
-// searchResults: any[] = [];

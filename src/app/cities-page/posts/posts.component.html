@@ -5,7 +5,8 @@
   </div>
 
   <div id="posts-container" data-spy="scroll">
-      <div class="card mb-3" style="max-height: 15rem;" *ngFor="let post of postArr.slice().reverse()">
+    <!-- Loop through the posts of our database. Reverse the array to return the newest posts on top. Return the user's image, username, title, and description for each post -->
+      <div class="card mb-3" style="max-height: 15rem;" *ngFor="let post of postsArr.slice().reverse()">
         <div class="row g-0" >
           <div class="col-md-4">
             <img

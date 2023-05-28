@@ -10,6 +10,7 @@ import { CommentContainerComponent } from './posts/comment-container/comment-con
 import { FormsModule } from '@angular/forms';
 import { PostPageComponent } from './posts/post-page/post-page.component';
 import { PostsService } from '../services/posts.service';
+import { CitiesService } from '../services/cities.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { PostsService } from '../services/posts.service';
     CommentContainerComponent,
     PostPageComponent
   ],
-  providers: [PostsService],
+  providers: [PostsService, CitiesService],
   imports: [CommonModule, HeaderModule, AppRoutingModule, FormsModule],
   exports: [CitiesComponent, CityInfoComponent, CityPageContainerComponent, PostsComponent, CommentContainerComponent, PostPageComponent],
 })
