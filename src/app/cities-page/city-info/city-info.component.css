@@ -6,7 +6,6 @@
     border-radius: 20px;
     font-size: 35px;
     font-weight: 500;
-    /* box-shadow: 14px 17px 18px -3px rgba(0,0,0,0.77); */
 }
 
 .city-detail-container {
@@ -37,3 +36,4 @@ img {
 .city-posts-container {
     grid-area: 2 / span 2;
 }
+
