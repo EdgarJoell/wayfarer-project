@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Subject, debounceTime, distinctUntilChanged } from 'rxjs';
-import { SearchService } from 'src/app/services/search.service';
 import { PostsService } from 'src/app/services/posts.service';
-import { HttpClient } from '@angular/common/http';
 import { posts } from 'src/app/cities-page/city-page-container/data-posts';
+
+// import { Subject, debounceTime, distinctUntilChanged } from 'rxjs';
+// import { SearchService } from 'src/app/services/search.service';
+// import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-search-bar',
@@ -11,20 +12,15 @@ import { posts } from 'src/app/cities-page/city-page-container/data-posts';
   styleUrls: ['./search-bar.component.css'],
 })
 export class SearchBarComponent implements OnInit {
-  searchResults: any[] = [];
-  searchSubject = new Subject();
-  post: any;
-
-  searchQuery: string = '';
   posts = this.postService.getPosts();
-
+  post: any;
   searchText: string = '';
   filteredPosts: any[] = [];
 
   constructor(
-    private searchService: SearchService,
-    private postService: PostsService,
-    private http: HttpClient
+    private postService: PostsService
+    // private searchService: SearchService,
+    // private http: HttpClient
   ) {}
 
   filterPosts() {
@@ -33,21 +29,32 @@ export class SearchBarComponent implements OnInit {
           post.title.toLowerCase().includes(this.searchText.toLowerCase())
         )
       : [];
-      console.log(this.filteredPosts);
+
+    if (this.filteredPosts.length === 0) {
+      this.filteredPosts.push({ title: 'No results' });
+    }
+    console.log(this.filteredPosts);
   }
 
-  selectPost(post: any) {
-    console.log(post);
-  }
-
-  ngOnInit(): void {
-    this.searchSubject
-      .pipe(debounceTime(1000), distinctUntilChanged())
-      .subscribe((id) => {
-        this.searchService.getPostPageById(id).subscribe((res) => {
-          console.log(res);
-          this.post = res;
-        });
-      });
-  }
+  ngOnInit(): void {}
 }
+
+// ngOnInit(): void {
+// this.searchSubject
+//   .pipe(debounceTime(1000), distinctUntilChanged())
+//   .subscribe((id) => {
+//     this.searchService.getPostPageById(id).subscribe((res) => {
+//       console.log(res);
+//       this.post = res;
+//     });
+//   });
+// }
+
+// selectPost(post: any) {
+//   console.log(post);
+// }
+
+// searchSubject = new Subject();
+// searchQuery: string = '';
+// isSearchActive: boolean=false;
+// searchResults: any[] = [];

@@ -1,25 +1,24 @@
-<form class="form-inline" (input)="filterPosts()">
-  <input
-    [(ngModel)]="searchText"
-    class="form-control mr-sm-2 search-bar"
-    type="search"
-    placeholder="Search for posts..."
-    name="searchText"
-  />
+<div>
+  <form class="form-inline" (input)="filterPosts()">
+    <input
+      [(ngModel)]="searchText"
+      class="form-control mr-sm-2 search-bar"
+      type="search"
+      placeholder="Search for posts..."
+      name="searchText"
+    />
+    <button class="btn btn-primary" type="submit">Search</button>
+  </form>
 
-  <button class="btn btn-primary" type="submit">Search</button>
-  <div class="dropdown-menu">
-      <a class="dropdown-item" *ngFor="let post of filteredPosts" (click)="selectPost(post)">{{ post.title }}</a>
-    </div>
-</form>
+  <div class="search-results d-flex flex-column" *ngIf="searchText.trim()">
+    <a
+      class="results-list"
+      *ngFor="let post of filteredPosts"
+      routerLink="/posts/{{ post.id }}"
+    >{{ post.title }}
+    </a>
+  </div>
+</div>
 
-<!-- <main>
-  <a [routerLink]="['/']">
-    <header class="brand-name">
-      <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
-    </header>
-  </a>
-  <section class="content">
-    <router-outlet></router-outlet>
-  </section>
-</main> -->
+<!-- drop down should go away after clicking a link -->
+<!-- no results should be un-clickable -->
