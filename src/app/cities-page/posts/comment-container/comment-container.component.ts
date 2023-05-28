@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { PostsService } from 'src/app/services/posts.service';
+import { PostsService } from '../../../services/posts.service';
 
 
 @Component({
@@ -41,7 +41,7 @@ export class CommentContainerComponent implements OnInit {
 
     this.formData = { ...formData };
     this.postService.addPost(this.formData)
-    
+
     console.log(this.formData)
 
     // close modal
@@ -49,7 +49,6 @@ export class CommentContainerComponent implements OnInit {
   }
 
   closeModal(): void {
-    
     this.formData = {
       id: '',
       postId: '',
