@@ -58,7 +58,7 @@ export class CityInfoComponent implements OnInit {
         return city.id === parseInt(paramId);
       });
       // commented out to limit api calls
-      // this.getWeather();
+      this.getWeather();
     });
   }
 }
