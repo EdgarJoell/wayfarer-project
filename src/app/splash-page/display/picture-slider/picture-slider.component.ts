@@ -14,20 +14,21 @@ export class PictureSliderComponent {
   // List of cities for splash page carousel
   images: Cities[] = [
     {
-      city: 'Madrid, Spain',
-      source: '../assets/img23.jpg',
+      city: 'Reykjavik, Iceland',
+      source: '../assets/iceland.jpg',
+      
     },
     {
-      city: 'Paris, France',
-      source: '../assets/img24.jpg',
+      city: 'London, United Kingdom',
+      source: '../assets/img5.jpg',
     },
     {
-      city: 'Somewhere',
-      source: '../assets/img25.jpg',
+      city: 'Santorini, Greece',
+      source: '../assets/greece.jpg',
     },
     {
-      city: 'Here',
-      source: '../assets/img26.jpg',
+      city: 'Grand Canyon, Arizona',
+      source: '../assets/grand-canyon.jpg',
     },
   ];
 }
