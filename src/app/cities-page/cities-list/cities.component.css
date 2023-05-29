@@ -41,6 +41,9 @@ h2 {
 }
 
 #list-container {
+  margin: auto;
   height: 55rem;
   overflow: scroll;
+  overflow-x: hidden;
+  max-height: 51rem;
 }

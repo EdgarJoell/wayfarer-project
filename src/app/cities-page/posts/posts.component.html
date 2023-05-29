@@ -18,7 +18,7 @@
             <img
               src="{{ post?.userImage }}"
               class="img-fluid rounded-start"
-              style="max-height: 15rem;"
+              
               alt="..."
             />
           </div>
@@ -29,9 +29,9 @@
                 <h6 class="card-text"><small class="text-body-secondary">Posted: {{ post?.createdAt }}</small></h6>
               </div>
               <!-- Truncate the post.title if the character length is greater than 200 -->
-              <a routerLink="/posts/{{post?.id}}"><h5>{{ post?.title.length > 200 ? (post?.title | slice:0:200) + '...' : post?.title }}</h5></a>
+              <a routerLink="/posts/{{post?.id}}"><h3>{{ post?.title.length > 200 ? (post?.title | slice:0:200) + '...' : post?.title }}</h3></a>
               <div data-spy="scroll" class="post-description">
-                <p> {{ post?.desc }}</p>
+                <h5> {{ post?.desc }}</h5>
               </div>
             </div>
           </div>
@@ -39,5 +39,3 @@
       </div>
   </div>
 </div>
-
-

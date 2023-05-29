@@ -1,5 +1,6 @@
-h2 {
-   margin-left: 3rem;
+.d-flex.justify-content-between {
+   max-width: 55rem;
+   margin: auto;
 }
 
 #posts-container {
@@ -7,33 +8,39 @@ h2 {
    max-width: 55rem;
    overflow-y: scroll;
    overflow-x: hidden;
-   height: 32rem;
+   max-height: 32rem;
+   border: 2px solid greenyellow;
 }
 
 .individual-posts {
    width: 59rem;
-   height: 15rem;
+   height: 10rem;
    padding-left: 0;
    margin-left: -3rem;
+   border: 2px solid red;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
-.post-description {
+/* .post-description {
    height: 9rem;
-}
+} */
 
 .flex {
    display: flex;
-   justify-content: baseline;
+   justify-content: flex-start;
+   align-items: center;
 }
 
 h6 {
    margin-left: 1rem;
-   padding-top: 0.45rem;
+   height: 100%;
 }
 
 p {
    font-size: 17pt;
-   
+
 }
 
 h5 {
@@ -52,9 +59,9 @@ h4.card-user-username {
 }
 
 img {
-   border: 3px solid gray;
-   width: 35%;
-   height: 40%;
+   /* border: 3px solid gray; */
+   width: 60%;
+   height: 60%;
    border-radius: 5px;
    margin: 12px;
 }
@@ -67,7 +74,13 @@ img {
    border: 1px solid gray;
 }
 
-div.card-body {
-   margin-top: 9%;
+.card-body {
+   /* margin-top: 9%; */
    padding-left: 0;
+}
+
+.row.g-0 {
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
