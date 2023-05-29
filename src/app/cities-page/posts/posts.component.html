@@ -14,7 +14,7 @@
         <div class="row g-0" >
           <div class="col-md-4">
             <img
-              src="{{ post.userImage }}"
+              src="{{ post?.userImage }}"
               class="img-fluid rounded-start"
               style="max-height: 15rem;"
               alt="..."
@@ -23,12 +23,13 @@
           <div class="col-md-8 individual-posts">
             <div class="card-body">
               <div class="flex">
-                <h4 class="card-user-username">{{ post.username }}</h4>
-                <h6 class="card-text"><small class="text-body-secondary">Posted: {{ post.createdAt }}</small></h6>
+                <h4 class="card-user-username">{{ post?.username }}</h4>
+                <h6 class="card-text"><small class="text-body-secondary">Posted: {{ post?.createdAt }}</small></h6>
               </div>
-              <a routerLink="/posts/{{post.id}}"><h5>{{ post.title }}</h5></a>
+              <!--  -->
+              <a routerLink="/posts/{{post?.id}}"><h5>{{ post?.title.length > 200 ? (post?.title | slice:0:200) + '...' : post?.title }}</h5></a>
               <div data-spy="scroll" class="post-description">
-                <p> {{ post.desc }}</p>
+                <p> {{ post?.desc }}</p>
               </div>
             </div>
           </div>
