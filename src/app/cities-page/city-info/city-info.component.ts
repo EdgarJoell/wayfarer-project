@@ -18,6 +18,7 @@ export class CityInfoComponent implements OnInit {
   cities = this.citiesService.getAllCities();
   // Current city selected based on the route parameter.
   city: any;
+  // Weather data after each
   weatherData: any;
 
   /**
@@ -38,23 +39,26 @@ export class CityInfoComponent implements OnInit {
    */
 
   getWeather(): void {
-    console.log(this.city.name)
     this.weatherService.getWeather(this.city.name.toLowerCase()).subscribe((data) => {
       this.weatherData = data;
     });
   }
 
+  // Weather API returns Kelvin value. Convert to Fahrenheit
   convertKelvinsToFahrenheit(temp: number): number {
     return Math.round((temp - 273.15) * 9 / 5 + 32);
   }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
+      // Find the city object from the cities array that matches the ID
+      let paramId: string = params.get('id') || '';
+      // Retrieve the ID parameter from the route
       this.city = this.cities.find((city) => {
-        let paramId: string = params.get('id') || '';
         return city.id === parseInt(paramId);
       });
-      this.getWeather()
+      // commented out to limit api calls
+      // this.getWeather();
     });
   }
 }
