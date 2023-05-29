@@ -1,86 +1,79 @@
 .d-flex.justify-content-between {
-   max-width: 55rem;
-   margin: auto;
+  max-width: 55rem;
+  margin: auto;
 }
 
 #posts-container {
-   margin: auto;
+   margin: 0 auto -1rem auto;
    max-width: 55rem;
    overflow-y: scroll;
    overflow-x: hidden;
-   max-height: 32rem;
-   border: 2px solid greenyellow;
+   max-height: 30rem;
 }
 
 .individual-posts {
-   width: 59rem;
-   height: 10rem;
-   padding-left: 0;
-   margin-left: -3rem;
-   border: 2px solid red;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  width: 59rem;
+  height: 10rem;
+  padding-left: 0;
+  margin-left: -3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* .post-description {
-   height: 9rem;
-} */
-
 .flex {
-   display: flex;
-   justify-content: flex-start;
-   align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 h6 {
-   margin-left: 1rem;
-   height: 100%;
+  margin-left: 1rem;
+  height: 100%;
 }
 
 p {
-   font-size: 17pt;
-
+  font-size: 17pt;
 }
 
 h5 {
-   font-size: 12.5pt;
+  font-size: 12.5pt;
 }
 
 h4.card-user-username {
-   font-size: 17pt;
-   font-weight: bold;
+  font-size: 17pt;
+  font-weight: bold;
 }
 
 .col-md-4 {
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 img {
-   /* border: 3px solid gray; */
-   width: 60%;
-   height: 60%;
-   border-radius: 5px;
-   margin: 12px;
+  width: 60%;
+  /* height: 60%; */
+  border-radius: 5px;
+  margin: 12px;
 }
 
 .card.mb-3 {
-   font-family: 'Barlow Condensed', sans-serif;
-   margin-right: 9%;
-   border-radius: 15px;
-   box-shadow: 5px 5px 3px -5px gray;
-   border: 1px solid gray;
+  font-family: "Barlow Condensed", sans-serif;
+  margin-right: 5%;
+  border-radius: 15px;
+  box-shadow: 5px 5px 3px -5px gray;
+  border: 1px solid gray;
+  padding: 2rem 0;
 }
 
 .card-body {
-   /* margin-top: 9%; */
-   padding-left: 0;
+  margin: 200rem 0;
+  padding-left: 0;
 }
 
 .row.g-0 {
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
