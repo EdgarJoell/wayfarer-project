@@ -1,0 +1,6 @@
+<div class="weather-container">
+    <div *ngIf="weatherData">
+        <div>Current Temperature: {{ weatherData?.main?.temp }}</div>
+        <div>{{ weatherData?.weather[0]?.description }}</div>
+    </div>
+</div>

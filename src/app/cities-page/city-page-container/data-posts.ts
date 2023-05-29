@@ -54,14 +54,13 @@ export const posts: Posts[] = [
     desc: 'Just go to scottsdale',
     createdAt: new Date().toLocaleDateString(),
   },
-
   {
     id: 6,
     postId: 4,
     username: 'Kanye West',
     userImage: '../assets/user-regular.svg',
     title: 'Ima let you finish',
-    desc: "Yeah And you say Chi city! Chi city! Chi city!",
+    desc: 'Yeah And you say Chi city! Chi city! Chi city!',
     createdAt: new Date().toLocaleDateString(),
   },
   {
@@ -91,7 +90,6 @@ export const posts: Posts[] = [
     desc: 'Is this Gotham City? I thought I was in Chicago',
     createdAt: new Date().toLocaleDateString(),
   },
-
   {
     id: 10,
     postId: 5,
@@ -101,7 +99,6 @@ export const posts: Posts[] = [
     desc: 'Come experience the Kobe System Conference ',
     createdAt: new Date().toLocaleDateString(),
   },
-
   {
     id: 11,
     postId: 5,
@@ -111,7 +108,6 @@ export const posts: Posts[] = [
     desc: 'Those vicious streets are filled with strays',
     createdAt: new Date().toLocaleDateString(),
   },
-
   {
     id: 12,
     postId: 7,
@@ -119,6 +115,16 @@ export const posts: Posts[] = [
     userImage: '../assets/user-regular.svg',
     title: 'The Empire',
     desc: 'Concrete jungle where dreams are made of',
+    createdAt: new Date().toLocaleDateString(),
+  },
+  {
+    id: 13,
+    postId: 1,
+    username: 'Lou Bega',
+    userImage: '../assets/user-regular.svg',
+    title:
+      '1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 1234 9876 98764321',
+    desc: 'Ladies and gentlemen, this is Mambo number ',
     createdAt: new Date().toLocaleDateString(),
   },
 ];

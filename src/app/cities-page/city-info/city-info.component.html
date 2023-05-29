@@ -2,7 +2,11 @@
   <div class="city-detail-container">
     <div class="city-details">
       <div>{{ city.name }}</div>
-      <div>{{ city.country}}</div>
+      <div>{{ city.country }}</div>
+      <!-- <app-weather-widget *ngIf="weatherData"> -->
+        <div>Temperature: {{ convertKelvinsToFahrenheit(weatherData?.main?.temp) }}°F</div>
+        <div>{{ weatherData?.weather[0]?.description }}</div>
+      <!-- </app-weather-widget> -->
     </div>
     <div class="city-image"><img src="{{ city.image }}" alt="" /></div>
   </div>
