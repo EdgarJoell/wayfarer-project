@@ -30,7 +30,6 @@ export class CommentContainerComponent implements OnInit {
   ngOnInit(): void {}
 
   submitForm(formData: NgForm): void {
-    this.formData = { ...formData };
     this.formData.id = this.posts[this.posts.length - 1].id + 1;
     this.activeRoute.paramMap.subscribe((params) => {
       this.formData.postId = this.posts.find((post) => {
@@ -41,9 +40,7 @@ export class CommentContainerComponent implements OnInit {
 
     this.formData = { ...formData };
     this.postService.addPost(this.formData)
-
     console.log(this.formData)
-
     // close modal
     this.closeModal();
   }
@@ -58,4 +55,8 @@ export class CommentContainerComponent implements OnInit {
       desc: '',
     };
   }
+
+    showPosts() {
+      console.log(this.postService.getPosts())
+    }
 }
