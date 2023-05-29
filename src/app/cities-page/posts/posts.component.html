@@ -9,6 +9,8 @@
   </div>
 
   <div id="posts-container" data-spy="scroll">
+    <!-- If an image detail page has no posts, "No Posts" text will be displayed -->
+    <div *ngIf="postsArr.length === 0">No Posts</div>
     <!-- Loop through the posts of our database. Reverse the array to return the newest posts on top. Return the user's image, username, title, and description for each post -->
       <div class="card mb-3" style="max-height: 15rem;" *ngFor="let post of postsArr.slice().reverse()">
         <div class="row g-0" >
@@ -26,7 +28,7 @@
                 <h4 class="card-user-username">{{ post?.username }}</h4>
                 <h6 class="card-text"><small class="text-body-secondary">Posted: {{ post?.createdAt }}</small></h6>
               </div>
-              <!--  -->
+              <!-- Truncate the post.title if the character length is greater than 200 -->
               <a routerLink="/posts/{{post?.id}}"><h5>{{ post?.title.length > 200 ? (post?.title | slice:0:200) + '...' : post?.title }}</h5></a>
               <div data-spy="scroll" class="post-description">
                 <p> {{ post?.desc }}</p>
@@ -37,3 +39,5 @@
       </div>
   </div>
 </div>
+
+<app-weather-widget></app-weather-widget>

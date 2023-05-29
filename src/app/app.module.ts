@@ -10,12 +10,15 @@ import { CitiesPageModule } from './cities-page/cities-page.module';
 import { SearchService } from './services/search.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
+import { PostsService } from './services/posts.service';
+import { WeatherService } from './services/weather.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,7 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [SearchService],
+  providers: [SearchService, PostsService, WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
