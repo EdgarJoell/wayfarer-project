@@ -23,8 +23,8 @@ export const posts: Posts[] = [
     postId: 2,
     username: 'Edgar',
     userImage: '../assets/user-regular.svg',
-    title: 'Good morning!',
-    desc: 'Official',
+    title: 'Official',
+    desc: 'Good morning!',
     createdAt: new Date().toLocaleDateString(),
   },
   {
@@ -50,7 +50,7 @@ export const posts: Posts[] = [
     postId: 3,
     username: 'Kayla C.',
     userImage: '../assets/user-regular.svg',
-    title: 'Donwtown Phoenix',
+    title: 'Downtown Phoenix',
     desc: 'Just go to scottsdale',
     createdAt: new Date().toLocaleDateString(),
   },
@@ -128,7 +128,3 @@ export const posts: Posts[] = [
     createdAt: new Date().toLocaleDateString(),
   },
 ];
-
-// export function savePost(post: any) {
-//   posts.push(post);
-// }

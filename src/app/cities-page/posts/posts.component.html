@@ -10,7 +10,7 @@
 
   <div id="posts-container" data-spy="scroll">
     <!-- If an image detail page has no posts, "No Posts" text will be displayed -->
-    <div *ngIf="postsArr.length === 0">No Posts</div>
+    <div class="no-posts" *ngIf="postsArr.length === 0">No Posts</div>
     <!-- Loop through the posts of our database. Reverse the array to return the newest posts on top. Return the user's image, username, title, and description for each post -->
       <div class="card mb-3" style="max-height: 15rem;" *ngFor="let post of postsArr.slice().reverse()">
         <div class="row g-0" >
