@@ -21,3 +21,102 @@ img {
 .cards-container {
     margin: 3rem 0;
 }
+
+
+.screen {
+    position: relative;
+    width: 1903px;
+    height: 640px;
+    border: 3px solid rgb(var(--primary-rgb) / 80%);
+    aspect-ratio: 16 / 9;
+    border-radius: 1rem;
+    background-color: rgb(var(--primary-rgb) / 15);
+  }
+  
+  .screen-overlay {
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    top: 0px;
+    background-size: 100% 9px;
+    background: linear-gradient(
+      rgb(var(--primary-rgb) / 0.15),
+      rgb(var(--primary-rgb) / 0.15) 3px,
+      transparent 3px,
+      transparent 9px
+      );
+      height: 100%;
+      width: 100%;
+  }
+  
+  .screen > .screen-image {
+    position: absolute;
+    background-image: url("../../../../assets/london.jpg");
+    height: 100%;
+    width: 100%;
+    background-size: 300%;
+    background-position: center;
+
+  }
+  
+  @keyframes pan-overlay {
+    from {
+      background-position: 0% 0%;
+    }
+  
+    to {
+      background-position: 100% 100%;
+    }
+  }
+  
+  @keyframes pan-image {  
+    0% {
+      background-position: 36% 42%;
+      background-size: 200%;
+    }
+    
+    20% {
+      background-position: 30% 35%;
+      background-size: 200%;
+    }
+    
+    20.0001% { /* -- View 2 -- */
+      background-position: 60% 85%;
+      background-size: 500%;
+    }
+    
+    40% {
+      background-position: 49% 81%;
+      background-size: 500%;
+    }
+    
+    40.0001% { /* -- View 3 -- */
+      background-position: 80% 42%;
+      background-size: 300%;
+    }
+    
+    60% {
+      background-position: 84% 33%;
+      background-size: 300%;
+    }
+    
+    60.0001% { /* -- View 4 -- */
+      background-position: 0% 0%;
+      background-size: 300%;
+    }
+    
+    80% {
+      background-position: 15% 4%;
+      background-size: 300%;
+    }
+    
+    80.0001% { /* -- View 5 -- */
+      background-position: 80% 10%;
+      background-size: 300%;
+    }
+    
+    100% {
+      background-position: 72% 14%;
+      background-size: 300%;
+    }
+  }
