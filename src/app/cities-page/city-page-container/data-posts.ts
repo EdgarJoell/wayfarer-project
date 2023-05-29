@@ -122,3 +122,7 @@ export const posts: Posts[] = [
     createdAt: new Date().toLocaleDateString(),
   },
 ];
+
+// export function savePost(post: any) {
+//   posts.push(post);
+// }
