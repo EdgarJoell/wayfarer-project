@@ -40,15 +40,9 @@ export class CommentContainerComponent implements OnInit {
 
     this.formData = { ...formData };
     this.postService.addPost(this.formData)
-
     console.log(this.formData)
-
     // close modal
     this.closeModal();
-  }
-
-  showPosts() {
-    console.log(this.postService.getPosts())
   }
 
   closeModal(): void {
@@ -61,4 +55,8 @@ export class CommentContainerComponent implements OnInit {
       desc: '',
     };
   }
+
+    showPosts() {
+      console.log(this.postService.getPosts())
+    }
 }
