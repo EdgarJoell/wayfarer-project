@@ -1,3 +1,15 @@
+<div id="other-posts">
+  <h4>Other posts</h4>
+  <div class="others-container">
+    <div *ngFor="let post of posts" class="posts">
+      <a routerLink="/posts/{{post.id}}"><div class="others">
+        <img class="others-images" src="{{post.userImage}}">
+        <h4 class="titles">{{post.title}}</h4>
+      </div></a>
+    </div>
+  </div>
+</div>
+
 <div id="posts-container" data-spy="scroll">
    <div class="card mb-3" style="max-height: 15rem;" >
      <div class="row g-0" >

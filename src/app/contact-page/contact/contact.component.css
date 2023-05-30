@@ -1,0 +1,16 @@
+form { 
+   margin: 2rem;
+}
+
+#container {
+   width: 63rem;
+   height: 23rem;
+   border: 1px solid black;
+   border-radius: 20px;
+}
+
+#contact-container {
+   width: 60rem;
+   height: 20rem;
+   margin: 4rem auto 4rem auto;
+}

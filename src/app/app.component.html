@@ -1,16 +1,18 @@
-<div class="navbar navbar-dark bg-dark justify-content-between">
-  <div class="nav-container">
-    <!-- Left: Logo -->
-    <app-logo></app-logo>
-    <!-- Middle: Search Bar -->
-    <app-search-bar></app-search-bar>
-    <!-- Right: Nav links -->
-    <app-navlinks></app-navlinks>
+<div id="container">
+  <div class="navbar navbar-dark bg-dark justify-content-between">
+    <div class="nav-container">
+      <!-- Left: Logo -->
+      <app-logo></app-logo>
+      <!-- Middle: Search Bar -->
+      <app-search-bar></app-search-bar>
+      <!-- Right: Nav links -->
+      <app-navlinks></app-navlinks>
+    </div>
   </div>
+
+  <!-- Routing -->
+  <router-outlet></router-outlet>
+
+  <!-- Footer -->
+  <app-footer id="footer"></app-footer>
 </div>
-
-<!-- Routing -->
-<router-outlet></router-outlet>
-
-<!-- Footer -->
-<app-footer></app-footer>
