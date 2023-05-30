@@ -1,10 +1,13 @@
 # Wayfarer Mini-Project
-Developers:
-   - Jaime Padilla
-   - Kevin Barrios
-   - Edgar Zambrana
 
-   <br> 
+### *"Find your way to remarkable destinations and connect with fellow travelers through Wayfarer."*
+ <br>
+ <div style="display: flex;">
+ <img src="https://wayfarer-mini-project.s3.amazonaws.com/main-display.png" alt="Main Display page with a picture of cities" width="1000" height="600">
+<!-- <img src="https://wayfarer-mini-project.s3.amazonaws.com/cities-page.png" alt="City page with a list of cities starting with San Francisco" width="800" height="500"> -->
+</div>
+
+
 
 ## Description of Project
 This purpose of this project was to mimic an on-the-job scenario where we are given the wireframes for the application as well as the user-stories. Then our group is supposed to come together to produce a product that stays faithful to the wireframe and user-stories.
@@ -15,6 +18,9 @@ The project idea was to create almost a social media site for travelers. People 
 
 ## Approach 
 The apporach to building this project was to follow the given wireframe through and through and add styling that we thought would best fit the application. Our group wanted to take the development approach of paired-programming in order to solve problems encountered when using Angular and to also write out the application with features that all of us were okay with. 
+
+<img src="https://wayfarer-mini-project.s3.amazonaws.com/kanban_board.png" alt="Projects Kanban board" width="700" height="500">
+
 
 <br>
 
@@ -29,6 +35,16 @@ One of the major accomplishments with this project is that our group had a firm 
 <br>
 
 ## Technologies Used
-   - Angular front-end frameowkr
+   - Angular front-end framework
    - Languages used: TypeScript, HTML, CSS
    - Bootstrap
+   - Git
+   - GitHub Pages
+   - AWS Cloud Storage
+   - VS Code
+<br>
+
+Developers:
+   - Jaime Padilla
+   - Kevin Barrios
+   - Edgar Zambrana
