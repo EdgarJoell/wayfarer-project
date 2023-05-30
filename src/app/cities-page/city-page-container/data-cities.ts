@@ -12,7 +12,6 @@ export const cities: Cities[] = [
     country: 'United States',
     image: 'https://wayfarer-mini-project.s3.amazonaws.com/san_francisco.png',
   },
-
   {
     id: 9,
     name: 'London',
