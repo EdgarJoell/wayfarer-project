@@ -12,13 +12,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { PostsService } from './services/posts.service';
 import { WeatherService } from './services/weather.service';
+import { ATagsDirective } from './directives/a-tags.directive';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

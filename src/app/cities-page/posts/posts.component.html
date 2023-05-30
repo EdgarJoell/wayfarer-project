@@ -1,5 +1,5 @@
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Heebo&family=Poppins:ital,wght@0,700;1,200&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Heebo&family=Poppins:ital,wght@0,700;1,200&display=swap");
 </style>
 
 <div>
@@ -10,34 +10,48 @@
 
   <div id="posts-container" data-spy="scroll">
     <!-- If an image detail page has no posts, "No Posts" text will be displayed -->
-    <div *ngIf="postsArr.length === 0">No Posts</div>
+    <div class="no-posts" *ngIf="postsArr.length === 0">No Posts</div>
     <!-- Loop through the posts of our database. Reverse the array to return the newest posts on top. Return the user's image, username, title, and description for each post -->
-      <div class="card mb-3" style="max-height: 15rem;" *ngFor="let post of postsArr.slice().reverse()">
-        <div class="row g-0" >
-          <div class="col-md-4">
-            <img
-              src="{{ post?.userImage }}"
-              class="img-fluid rounded-start"
-              style="max-height: 15rem;"
-              alt="..."
-            />
-          </div>
-          <div class="col-md-8 individual-posts">
-            <div class="card-body">
-              <div class="flex">
-                <h4 class="card-user-username">{{ post?.username }}</h4>
-                <h6 class="card-text"><small class="text-body-secondary">Posted: {{ post?.createdAt }}</small></h6>
-              </div>
-              <!-- Truncate the post.title if the character length is greater than 200 -->
-              <a routerLink="/posts/{{post?.id}}"><h5>{{ post?.title.length > 200 ? (post?.title | slice:0:200) + '...' : post?.title }}</h5></a>
-              <div data-spy="scroll" class="post-description">
-                <p> {{ post?.desc }}</p>
-              </div>
+    <div
+      class="card mb-3"
+      style="max-height: 15rem"
+      *ngFor="let post of postsArr.slice().reverse()"
+    >
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img
+            src="{{ post?.userImage }}"
+            class="img-fluid rounded-start"
+            style="max-height: 15rem"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8 individual-posts">
+          <div class="card-body">
+            <div class="flex">
+              <h4 class="card-user-username">{{ post?.username }}</h4>
+              <h6 class="card-text">
+                <small class="text-body-secondary"
+                  >Posted: {{ post?.createdAt }}</small
+                >
+              </h6>
+            </div>
+            <!-- Truncate the post.title if the character length is greater than 200 -->
+            <a appATags routerLink="/posts/{{ post?.id }}"
+              ><h3>
+                {{
+                  post?.title.length > 200
+                    ? (post?.title | slice : 0 : 200) + "..."
+                    : post?.title
+                }}
+              </h3></a
+            >
+            <div data-spy="scroll" class="post-description">
+              <h4>{{ post?.desc }}</h4>
             </div>
           </div>
         </div>
       </div>
+    </div>
   </div>
 </div>
-
-

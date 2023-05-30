@@ -1,73 +1,90 @@
-h2 {
-   margin-left: 3rem;
+.d-flex.justify-content-between {
+  max-width: 55rem;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
 }
 
 #posts-container {
-   margin: auto;
+   margin: 0 auto -1rem auto;
    max-width: 55rem;
    overflow-y: scroll;
    overflow-x: hidden;
-   height: 32rem;
+   max-height: 30rem;
 }
 
 .individual-posts {
-   width: 59rem;
-   height: 15rem;
-   padding-left: 0;
-   margin-left: -3rem;
-}
-
-.post-description {
-   height: 9rem;
+  width: 59rem;
+  height: 10rem;
+  padding-left: 0;
+  margin-left: -3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex {
-   display: flex;
-   justify-content: baseline;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 h6 {
-   margin-left: 1rem;
-   padding-top: 0.45rem;
+  margin-left: 1rem;
+  height: 100%;
 }
 
 p {
-   font-size: 17pt;
-   
+  font-size: 17pt;
 }
 
 h5 {
-   font-size: 12.5pt;
+  font-size: 12.5pt;
 }
 
 h4.card-user-username {
-   font-size: 17pt;
-   font-weight: bold;
+  font-size: 17pt;
+  font-weight: bold;
 }
 
 .col-md-4 {
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 img {
-   border: 3px solid gray;
-   width: 35%;
-   height: 40%;
-   border-radius: 5px;
-   margin: 12px;
+  width: 60%;
+  /* height: 60%; */
+  border-radius: 5px;
+  margin: 12px;
 }
 
 .card.mb-3 {
-   font-family: 'Barlow Condensed', sans-serif;
-   margin-right: 9%;
-   border-radius: 15px;
-   box-shadow: 5px 5px 3px -5px gray;
-   border: 1px solid gray;
+  font-family: "Barlow Condensed", sans-serif;
+  margin-right: 5%;
+  border-radius: 5px;
+  box-shadow: 5px 5px 3px -5px lightgrey;
+  border: 1px solid lightgrey;
+  padding: 2rem 0;
 }
 
-div.card-body {
-   margin-top: 9%;
-   padding-left: 0;
+.card-body {
+  margin: 200rem 0;
+  padding-left: 0;
+}
+
+.row.g-0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-posts {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.5rem;
 }

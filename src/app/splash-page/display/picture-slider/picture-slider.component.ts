@@ -15,20 +15,19 @@ export class PictureSliderComponent {
   images: Cities[] = [
     {
       city: 'Reykjavik, Iceland',
-      source: '../assets/iceland.jpg',
-      
+      source: 'https://wayfarer-mini-project.s3.amazonaws.com/iceland.jpg',
     },
     {
       city: 'London, United Kingdom',
-      source: '../assets/img5.jpg',
+      source: 'https://wayfarer-mini-project.s3.amazonaws.com/img5.jpg',
     },
     {
       city: 'Santorini, Greece',
-      source: '../assets/greece.jpg',
+      source: 'https://wayfarer-mini-project.s3.amazonaws.com/greece.jpg',
     },
     {
       city: 'Grand Canyon, Arizona',
-      source: '../assets/grand-canyon.jpg',
+      source: 'https://wayfarer-mini-project.s3.amazonaws.com/grand-canyon.jpg',
     },
   ];
 }
