@@ -1,8 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { PostsService } from '../../../services/posts.service';
-
 
 @Component({
   selector: 'app-comment-container',
@@ -10,6 +9,7 @@ import { PostsService } from '../../../services/posts.service';
   styleUrls: ['./comment-container.component.css'],
 })
 export class CommentContainerComponent implements OnInit {
+  @ViewChild('postsForm') formElement!: ElementRef;
 
   posts = this.postService.getPosts();
   formData: any = {
@@ -39,8 +39,8 @@ export class CommentContainerComponent implements OnInit {
     });
 
     this.formData = { ...formData };
-    this.postService.addPost(this.formData)
-    console.log(this.formData)
+    this.postService.addPost(this.formData);
+    console.log(this.formData);
     // close modal
     this.closeModal();
   }
@@ -55,8 +55,4 @@ export class CommentContainerComponent implements OnInit {
       desc: '',
     };
   }
-
-    showPosts() {
-      console.log(this.postService.getPosts())
-    }
 }
