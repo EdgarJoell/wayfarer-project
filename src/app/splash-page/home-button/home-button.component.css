@@ -1,3 +1,13 @@
-button {
+#go-button {
+    display: flex;
+    justify-content: center;
     margin-bottom: 3rem;
+}
+
+p {
+    font-family: cursive;
+    font-size: 1.3rem;
+    font-style: italic;
+    padding-bottom: 0.5rem;
+    letter-spacing: -1px;
 }
