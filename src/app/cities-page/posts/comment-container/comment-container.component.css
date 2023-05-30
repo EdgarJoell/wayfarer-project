@@ -30,8 +30,15 @@ button {
     display: flex;
 }
 
-.col-sm-10 {
+.form-control {
     padding: .5rem;
+    margin: 5px;
+    width: 24.5rem;
+}
+
+textarea {
+    min-height: 8rem;
+    max-height: 8rem;
 }
 
 .modal-footer {

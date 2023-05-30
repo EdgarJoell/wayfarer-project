@@ -5,9 +5,10 @@ import { NavlinksComponent } from './navlinks/navlinks.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { ATagsDirective } from '../directives/a-tags.directive';
 
 @NgModule({
-  declarations: [LogoComponent, NavlinksComponent, SearchBarComponent], 
+  declarations: [LogoComponent, NavlinksComponent, SearchBarComponent],
   imports: [
     CommonModule,
     AppRoutingModule,
@@ -15,7 +16,7 @@ import { FormsModule } from '@angular/forms';
   ],
   exports: [
     LogoComponent, NavlinksComponent, SearchBarComponent
-  ]
+  ],
 })
 
 export class HeaderModule { }

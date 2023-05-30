@@ -25,7 +25,7 @@
   white-space: nowrap;
 }
 
-.search-results a:hover {
+.results-list:hover {
   outline: 1px solid #4fa4ff;
   border-radius: 4px;
 }
