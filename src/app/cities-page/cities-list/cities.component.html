@@ -1,0 +1,27 @@
+<div id="cities-list-container">
+  <h2>CITIES</h2>
+  <div data-spy="scroll" id="list-container">
+    <a
+      appATags
+      class="card mb-3 da-cards"
+      style="max-width: 540px"
+      *ngFor="let city of cities"
+      routerLink="/cities/{{ city.id }}"
+    >
+      <div class="row g-0 card-container">
+        <div class="col-md-4 city-image-container">
+          <img
+            src="{{ city.image }}"
+            class="img-fluid rounded-start"
+            alt="{{ city.name }}"
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h3 class="card-title">{{ city.name }}</h3>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

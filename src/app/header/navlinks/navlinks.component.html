@@ -1,0 +1,12 @@
+<ul class="nav nav-pills justify-content-end">
+  <li class="nav-item">
+    <!-- routerLinkActiveOptions will make sure only the HOME link is active if the page matches exactly to ""  -->
+    <a class="nav-link text-light" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">HOME</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-light" routerLink="/cities/1" routerLinkActive="active">CITIES</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-light" routerLink="contact" routerLinkActive="active">CONTACT</a>
+  </li>
+</ul>
