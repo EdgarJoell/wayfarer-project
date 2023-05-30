@@ -1,20 +1,33 @@
 .city-image-container {
   display: inline-block;
   position: relative;
+  width: 200px;
+  height: 155px;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
 }
 
 img {
-  width: 100%;
-  height: 100%;
+  height: 200px;
   object-fit: cover;
+  display: block;
 }
 
 h2 {
+  font-family: 'Barlow Condensed', sans-serif;
   margin-left: 3rem;
 }
 
 .col-md-8 {
     margin: auto;
+}
+
+.card.mb-3:hover {
+  background-color: #f9a21b;
 }
 
 .da-cards {
@@ -29,11 +42,14 @@ h2 {
   border-radius: 20px;
   height: 60rem;
   width: 40rem;
-  border: 2px solid black;
+  outline: 1px solid gray;
   padding-top: 2rem;
 }
 
 #list-container {
+  margin: auto;
   height: 55rem;
   overflow: scroll;
+  overflow-x: hidden;
+  max-height: 51rem;
 }

@@ -1,21 +1,23 @@
-<form class="form-inline">
-  <input name="title" (keyup)="findPostId(id)" [(ngModel)]="id"
-    class="form-control mr-sm-2 search-bar"
-    type="search"
-    placeholder="Search for posts..."
-  />
-  <button class="btn btn-primary " type="submit">
-    Search
-  </button>
-</form>
-
-<!-- <main>
-  <a [routerLink]="['/']">
-    <header class="brand-name">
-      <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
-    </header>
-  </a>
-  <section class="content">
-    <router-outlet></router-outlet>
-  </section>
-</main> -->
+<div>
+  <form class="form-inline" (input)="filterPosts()">
+    <input
+      [(ngModel)]="searchBarText"
+      class="form-control mr-sm-2 search-bar"
+      type="search"
+      placeholder="Search for posts..."
+      name="searchBarText"
+    />
+  </form>
+  <!-- The trim() method is removing empty white space to avoid API calls for empty spaces -->
+  <div class="search-results d-flex flex-column" *ngIf="searchBarText.trim()">
+    <!-- Create a list of links for each search result -->
+    <a
+      class="results-list"
+      *ngFor="let post of filteredPosts"
+      (click)="clearSearchBar()"
+      routerLink="/posts/{{ post.id }}"
+    >{{ post.title }}
+    </a>
+    <div *ngIf="filteredPosts.length === 0" class="no-results-text">No results found</div>
+  </div>
+</div>

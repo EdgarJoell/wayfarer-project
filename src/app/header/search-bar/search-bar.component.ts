@@ -1,42 +1,37 @@
-import { Component, OnInit } from '@angular/core';
-import { posts } from 'src/app/cities-page/city-page-container/data-posts';
-import { Subject, debounceTime, distinctUntilChanged } from 'rxjs';
-import { SearchService } from 'src/app/services/search.service';
-
+import { Component } from '@angular/core';
+import { PostsService } from '../../services/posts.service';
+PostsService
 
 @Component({
   selector: 'app-search-bar',
   templateUrl: './search-bar.component.html',
-  styleUrls: ['./search-bar.component.css']
+  styleUrls: ['./search-bar.component.css'],
 })
-export class SearchBarComponent implements OnInit{
-  id: string = ''
-  post: any;
-  posts = posts;
-  searchResults: any[] = [];
-  searchSubject = new Subject();
+export class SearchBarComponent {
+  // Two-way binding with the search input
+  searchBarText: string = '';
+  // Holds filtered results
+  filteredPosts: any[] = [];
+  // PostsService to retrieve all posts in the database and assigned to the private variable posts
+  private posts = this.postsService.getPosts()
 
-  constructor(private searchService: SearchService) {}
+  constructor(private postsService: PostsService) {}
 
-
-
-  findPostId(id: any) {
-  this.searchResults = [];
-
-    if(id){
-      this.searchResults = this.posts.filter(post => post.id === parseInt(id))
-    }
+  filterPosts() {
+    // Assigns the filteredPosts array with the filtered results from the user's input made in the two-way binding through the searchBarText initializing
+    this.filteredPosts = this.searchBarText
+      ? // filter through the list of posts in our database and return search results by the title of the post from the searchBarText value
+        this.posts.filter(
+          (post) =>
+            // compare the user's input values without worrying about what case is entered in the search box
+            post.title.toLowerCase().includes(this.searchBarText.toLowerCase())
+          // returns an empty array if there are no posts to filter through in the database
+        )
+      : [];
   }
 
-  ngOnInit(): void {
-    this.searchSubject
-    .pipe(debounceTime(1000), distinctUntilChanged())
-    .subscribe((id) => {
-      this.searchService.getPostPageById(id)
-      .subscribe((res) => {
-        console.log(res);
-        this.post = res;
-      })
-    })
+  // Clears search bar text after a user clicks on a link which also removes the dropdown list
+  clearSearchBar() {
+    this.searchBarText = '';
   }
 }

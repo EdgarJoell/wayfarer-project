@@ -1,6 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { cities } from '../city-page-container/data-cities';
+import { CitiesService } from '../../services/cities.service';
+
+
+/**
+ * Component responsible for displaying the list of cities.
+ */
 
 @Component({
   selector: 'app-cities',
@@ -8,14 +13,32 @@ import { cities } from '../city-page-container/data-cities';
   styleUrls: ['./cities.component.css'],
 })
 export class CitiesComponent implements OnInit {
-  cities = cities;
+  /**
+   * Array containing all the cities.
+   */
+  cities = this.citiesService.getAllCities();
+
+  /**
+   * Current city selected based on the route parameter.
+   */
   city: any;
 
-  constructor(private route: ActivatedRoute) {}
+  /**
+   * Constructs an instance of CitiesComponent.
+   * @param route The ActivatedRoute to access the route parameter.
+   * @param citiesService The CitiesService to retrieve the list of cities.
+   */
+
+  constructor(private route: ActivatedRoute, private citiesService: CitiesService) {}
+
+  /**
+   * Lifecycle hook called after the component has been initialized.
+   * Retrieves the route parameter and finds the corresponding city.
+   */
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
-      this.city = cities.find((city) => {
+      this.city = this.cities.find((city) => {
         let paramId: string = params.get('id') || '';
         return city.id === parseInt(paramId);
       });

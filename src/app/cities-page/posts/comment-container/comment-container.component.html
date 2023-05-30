@@ -29,17 +29,17 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="staticBackdropLabel">New Comment</h5>
-        <button
+        <!-- <button
           type="button"
           class="close"
           data-dismiss="modal"
           aria-label="Close"
         >
           <span aria-hidden="true">&times;</span>
-        </button>
+        </button> -->
       </div>
-      <div class="modal-body">
-        <form #postsForm="ngForm" (ngSubmit)="submitForm(formData)">
+      <div class="modal-body" #postModal>
+        <form #postsForm="ngForm" (ngSubmit)="submitForm(formData)" >
           <div class="form-row">
             <div class="col-sm-10">
               <input
@@ -65,6 +65,9 @@
                 type="text"
                 class="form-control"
                 placeholder="Title"
+                required
+                minlength="1"
+                maxlength="200"
                 [(ngModel)]="formData.title"
               />
               <div class="input-group">
@@ -80,7 +83,6 @@
           </div>
 
           <div class="modal-footer">
-            <!-- clears the form -->
             <button
               type="button"
               class="btn btn-secondary"
@@ -89,10 +91,11 @@
               Close
             </button>
             <!-- adds data -->
-            <button type="submit" class="btn btn-primary">Comment</button>
+            <button type="submit" (click)="submitForm(formData)" class="btn btn-primary"  data-dismiss="modal">Comment</button>
           </div>
         </form>
       </div>
     </div>
   </div>
 </div>
+<!-- <button (click)="showPosts()" >Data</button> -->

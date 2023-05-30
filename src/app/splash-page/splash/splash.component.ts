@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './splash.component.html',
   styleUrls: ['./splash.component.css']
 })
-export class SplashComponent {
-
-}
+export class SplashComponent {}

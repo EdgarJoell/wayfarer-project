@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { PostsService } from '../../../services/posts.service';
 
-import { posts } from '../../city-page-container/data-posts';
 
 @Component({
   selector: 'app-comment-container',
@@ -10,7 +10,8 @@ import { posts } from '../../city-page-container/data-posts';
   styleUrls: ['./comment-container.component.css'],
 })
 export class CommentContainerComponent implements OnInit {
-  posts = posts;
+
+  posts = this.postService.getPosts();
   formData: any = {
     id: '',
     postId: '',
@@ -18,23 +19,44 @@ export class CommentContainerComponent implements OnInit {
     userImage: '',
     title: '',
     desc: '',
-    createdAt: new Date().toLocaleDateString()
+    createdAt: new Date().toLocaleDateString(),
   };
 
-  constructor(private activeRoute: ActivatedRoute) {}
+  constructor(
+    private activeRoute: ActivatedRoute,
+    private postService: PostsService
+  ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  submitForm(formData: NgForm): void {
+    this.formData.id = this.posts[this.posts.length - 1].id + 1;
     this.activeRoute.paramMap.subscribe((params) => {
-      this.formData.postId = posts.find((post) => {
+      this.formData.postId = this.posts.find((post) => {
         let paramId: string = params.get('id') || '';
         return post.id === parseInt(paramId);
       })?.id;
     });
+
+    this.formData = { ...formData };
+    this.postService.addPost(this.formData)
+    console.log(this.formData)
+    // close modal
+    this.closeModal();
   }
 
-  submitForm(formData: NgForm): void {
-    this.formData.id = posts[posts.length - 1].id += 1;
-    this.formData = { ...formData };
-    console.log(this.formData);
+  closeModal(): void {
+    this.formData = {
+      id: '',
+      postId: '',
+      username: '',
+      userImage: '',
+      title: '',
+      desc: '',
+    };
   }
+
+    showPosts() {
+      console.log(this.postService.getPosts())
+    }
 }
