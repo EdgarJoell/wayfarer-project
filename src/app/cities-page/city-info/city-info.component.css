@@ -21,6 +21,10 @@
     margin-top: 2rem;
 }
 
+.weather-data > * {
+    color: #707070;
+}
+
 img {
     max-width: 35rem;
     width: 100%;
