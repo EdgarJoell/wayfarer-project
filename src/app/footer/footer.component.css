@@ -1,29 +1,55 @@
 #footer {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 10rem;
-   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  width: 50rem;
+  height: 12rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 0;
 }
 
 .credits {
-   display: flex;
-   flex-direction: column;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20rem;
 }
 
-img {
-   width: 10rem;
-   height: 10rem;
-   margin-right: 2rem;
+li {
+  width: 18rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  position: relative;
 }
 
-h3 {
-   width: 10rem;
-   color: white;
+.external-links {
+  display: flex;
+  justify-content: space-between;
 }
 
-p {
-   width: 25rem;
-   color: white;
-   margin-left: 4rem;
+.fa-brands {
+  padding: 0 0.25rem;
+}
+
+.fa-github,
+.fa-linkedin {
+  color: white;
+}
+
+.fa-github:hover {
+  color: #b35fbb;
+}
+
+.fa-linkedin:hover {
+  color: #03aadf;
 }
