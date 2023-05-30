@@ -1,0 +1,29 @@
+h2 {
+   font-size: 27pt;
+   text-align: center;
+   margin: 1rem auto 3rem auto;
+}
+
+h4 {
+   margin-bottom: 4rem;
+   text-align: center;
+}
+
+.flex {
+   display: flex;
+}
+
+#contact {
+   height: 40rem;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+#contact-container {
+   width: 60rem;
+   height: 35rem;
+   margin: auto;
+   border: 2px solid black;
+   border-radius: 20px;
+}
