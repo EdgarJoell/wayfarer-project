@@ -13,10 +13,6 @@ export class WeatherWidgetComponent implements OnInit {
   constructor(private weatherService: WeatherService) {}
 
   ngOnInit(): void {
-    // this.weatherData = {
-    //   main: {},
-    // };
-    // this.getWeather();
   }
 
   getWeather(): void {
