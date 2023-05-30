@@ -55,4 +55,8 @@ export class CommentContainerComponent implements OnInit {
       desc: '',
     };
   }
+
+  showPosts() {
+    console.log(this.postService.getPosts());
+  }
 }

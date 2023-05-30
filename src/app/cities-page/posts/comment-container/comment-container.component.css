@@ -1,8 +1,39 @@
-.comment-container {
-    border: 2px solid red;
+.modal-content {
+    min-width: 31rem;
+    width: 28rem;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+    width: 30rem;
+}
+
+.form-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
     display: flex;
-    margin-right: 2.8rem;
+}
+
+.col-sm-10 {
+    padding: .5rem;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn.btn-secondary {
+    width: 96.66px;
 }
