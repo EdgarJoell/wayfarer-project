@@ -25,18 +25,18 @@ img {
 
 :root {
     --background-rgb: 29 30 34;
-    
+
     --blue-rgb: 33 150 243;
     --primary-rgb: var(--blue-rgb);
-    
+
     --blob-color-1: rgb(var(--blue-rgb));
     --blob-color-2: dodgerblue;
   }
-  
+
   * {
     box-sizing: border-box;
   }
-  
+
   body {
     height: 100vh;
     display: grid;
@@ -45,7 +45,7 @@ img {
     margin: 0rem;
     overflow: hidden;
   }
-  
+
   .screen {
     width: 100%;
     height: 600px;
@@ -58,7 +58,7 @@ img {
     position: relative;
     z-index: 10;
   }
-  
+
   .screen:after,
   .screen:before {
     content: "";
@@ -69,32 +69,32 @@ img {
     translate: -50% 0%;
     background-color: white;
   }
-  
+
   .screen:before {
     width: 15%;
     top: 0rem;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
   }
-  
+
   .screen:after {
     width: 25%;
     bottom: 0rem;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
   }
-  
+
   @keyframes pan-overlay {
     from {
       background-position: 0% 0%;
     }
-    
+
     to {
       background-position: 0% -100%;
     }
   }
-  
-  .screen-overlay {    
+
+  .screen-overlay {
     background: linear-gradient(
       rgb(var(--primary-rgb) / 0.15),
       rgb(var(--primary-rgb) / 0.15) 3px,
@@ -110,61 +110,61 @@ img {
     left: 0px;
     top: 0px;
   }
-  
-  @keyframes pan-image {  
+
+  @keyframes pan-image {
     0% {
       background-position: 36% 42%;
       background-size: 100%;
     }
-    
+
     20% {
       background-position: 30% 35%;
       background-size: 140%;
     }
-    
+
     20.0001% { /* -- View 2 -- */
       background-position: 60% 85%;
       background-size: 130%;
     }
-    
+
     40% {
       background-position: 49% 81%;
       background-size: 150%;
     }
-    
+
     40.0001% { /* -- View 3 -- */
       background-position: 80% 42%;
       background-size: 120%;
     }
-    
+
     60% {
       background-position: 84% 33%;
       background-size: 160%;
     }
-    
+
     60.0001% { /* -- View 4 -- */
       background-position: 0% 0%;
       background-size: 150%;
     }
-    
+
     80% {
       background-position: 15% 4%;
       background-size: 200%;
     }
-    
+
     80.0001% { /* -- View 5 -- */
       background-position: 80% 10%;
       background-size: 120%;
     }
-    
+
     100% {
       background-position: 72% 14%;
       background-size: 140%;
     }
   }
-  
+
   .screen > .screen-image {
-    background-image: url("../../../../assets/img5.jpg");
+    background-image: url("https://wayfarer-mini-project.s3.amazonaws.com/img5.jpg");
     height: 100%;
     width: 100%;
     position: absolute;
@@ -176,7 +176,7 @@ img {
     /* filter: sepia(100%) hue-rotate(160deg); */
     animation: pan-image 15s linear infinite;
   }
-  
+
   .screen > .screen-content {
     display: flex;
     flex-direction: column;
@@ -191,13 +191,13 @@ img {
     border: 1px solid rgb(var(--primary-rgb) / 50%);
     border-radius: 0.6rem;
   }
-  
+
   .screen > .screen-content > .screen-icon {
     color: white;
     font-size: 4rem;
     text-shadow: 0px 0px 0.5rem white;
   }
-  
+
   .screen > .screen-content > .screen-user{
     display: flex;
     flex-direction: column;
@@ -205,7 +205,7 @@ img {
     gap: 1rem;
     position: relative;
   }
-  
+
   .screen > .screen-content > .screen-user:before,
   .screen > .screen-content > .screen-user:after {
     content: "";
@@ -215,33 +215,33 @@ img {
     border-radius: 1rem;
     box-shadow: 0px 0px 8px 3px rgb(var(--primary-rgb) / 60%);
   }
-  
+
   .screen > .screen-content > .screen-user:before {
     height: 2px;
     width: 50px;
     translate: -20px -1rem;
     /* opacity: 0.75; */
   }
-  
+
   .screen > .screen-content > .screen-user:after {
     height: 3px;
     width: 30px;
     translate: 26px calc(-1rem - 0.5px);
   }
-  
+
   .screen > .screen-content > .screen-user > :is(.name, .link) {
     font-family: "Source Code Pro", monospace;
-    color: white; 
+    color: white;
     text-align: center;
-    text-transform: uppercase; 
+    text-transform: uppercase;
   }
-  
+
   .screen > .screen-content > .screen-user > .name {
     position: relative;
     font-size: 4.25rem;
     font-weight: 400;
   }
-  
+
   .screen > .screen-content > .screen-user > .name:before,
   .screen > .screen-content > .screen-user > .name:after {
     content: "";
@@ -251,18 +251,18 @@ img {
     border: 2px solid white;
     border-radius: 2px;
   }
-  
+
   .screen > .screen-content > .screen-user > .name:before {
     top: 55%;
     right: -1.5rem;
   }
-  
+
   .screen > .screen-content > .screen-user > .name:after {
     top: 45%;
-    left: -1.5rem;  
+    left: -1.5rem;
   }
-  
-  .screen > .screen-content > .screen-user > .link {  
+
+  .screen > .screen-content > .screen-user > .link {
     opacity: 0.8;
     font-size: 1.5rem;
     text-shadow: 0px 0px 0.5rem white;
@@ -270,38 +270,37 @@ img {
     letter-spacing: 0.3rem;
     text-decoration: none;
   }
-  
-  .screen > .screen-content > .screen-user > .link:is(:hover, :focus) {  
-    text-decoration: underline; 
+
+  .screen > .screen-content > .screen-user > .link:is(:hover, :focus) {
+    text-decoration: underline;
   }
-  
+
   @media(max-width: 700px) {
     .screen {
       scale: 0.6;
       margin-bottom: 0rem;
     }
   }
-  
+
   /* -- Blob effect -- */
-  
+
   @keyframes rotate {
     from {
       rotate: 0deg;
     }
-    
+
     50% {
       scale: 1 1.5;
     }
-    
+
     to {
       rotate: 360deg;
     }
   }
-  
+
   #blob {
     background-color: white;
     height: 34vmax;
-    aspect-ratio: 1;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -311,7 +310,7 @@ img {
     animation: rotate 20s infinite;
     opacity: 0.5;
   }
-  
+
   #blur {
     height: 100%;
     width: 100%;
@@ -319,9 +318,9 @@ img {
     z-index: 2;
     backdrop-filter: blur(12vmax);
   }
-  
+
   /* -- Links -- */
-  
+
   #links {
     display: flex;
     flex-direction: column;
@@ -332,45 +331,45 @@ img {
     z-index: 10;
     padding: 1rem;
   }
-  
+
   .meta-link {
     display: flex;
     align-items: center;
     gap: 0.5rem;
   }
-  
+
   .meta-link > :is(span, a) {
     font-family: "Rubik", sans-serif;
     font-size: 0.9rem;
     color: white;
   }
-  
+
   .meta-link > .label {
-    width: 160px; 
+    width: 160px;
     text-align: right;
   }
-  
+
   .meta-link > a {
     text-decoration: none;
     outline: none;
   }
-  
+
   .meta-link > a.source {
     color: rgb(94, 106, 210);
   }
-  
+
   .meta-link > a:is(:hover, :focus) > i {
-    color: white;  
+    color: white;
   }
-  
+
   .meta-link > a.youtube {
     color: rgb(239, 83, 80);
   }
-  
+
   .meta-link > a.youtube > i {
-    padding-top: 0.2rem; 
+    padding-top: 0.2rem;
   }
-  
+
   .meta-link > a > i {
     height: 1rem;
     line-height: 1rem;
