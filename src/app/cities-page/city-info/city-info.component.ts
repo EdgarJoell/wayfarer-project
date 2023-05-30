@@ -57,29 +57,38 @@ export class CityInfoComponent implements OnInit {
     let weatherDesc = this.weatherData.weather[0].description;
     const weatherIcons: WeatherIcons = {
       // cloudy
-      'broken clouds': '../../assets/weather-files/cloudy.gif',
-      'few clouds': '../../assets/weather-files/cloudy.gif',
-      'overcast clouds': '../../assets/weather-files/cloudy.gif',
-      'scattered clouds': '../../assets/weather-files/cloudy.gif',
+      'broken clouds':
+        'https://wayfarer-mini-project.s3.amazonaws.com/Weather+Icons/cloudy.gif',
+      'few clouds':
+        'https://wayfarer-mini-project.s3.amazonaws.com/Weather+Icons/cloudy.gif',
+      'overcast clouds':
+        'https://wayfarer-mini-project.s3.amazonaws.com/Weather+Icons/cloudy.gif',
+      'scattered clouds':
+        'https://wayfarer-mini-project.s3.amazonaws.com/Weather+Icons/cloudy.gif',
       // fog
-      'fog': '../../assets/weather-files/fog.gif',
+      fog: 'https://wayfarer-mini-project.s3.amazonaws.com/Weather+Icons/fog.gif',
       // haze
-      'haze': '../../assets/weather-files/haze.gif',
+      haze: 'https://wayfarer-mini-project.s3.amazonaws.com/Weather+Icons/haze.gif',
       // rain
-      'heavy rain': '../../assets/weather-files/heavy_rain.gif',
-      'light rain': '../../assets/weather-files/light_rain.gif',
-      'shower rain': '../../assets/weather-files/rain.gif',
-      'rain': '../../assets/weather-files/rain.gif',
+      'heavy rain':
+        'https://wayfarer-mini-project.s3.amazonaws.com/Weather+Icons/heavy_rain.gif',
+      'light rain':
+        'https://wayfarer-mini-project.s3.amazonaws.com/Weather+Icons/light_rain.gif',
+      'shower rain':
+        'https://wayfarer-mini-project.s3.amazonaws.com/Weather+Icons/rain.gif',
+      rain: 'https://wayfarer-mini-project.s3.amazonaws.com/Weather+Icons/rain.gif',
       // snow
-      'snow': '../../assets/weather-files/snow.gif',
+      snow: 'https://wayfarer-mini-project.s3.amazonaws.com/Weather+Icons/snow.gif',
       // storm
-      'thunderstorm': '../../assets/weather-files/storm.gif',
+      thunderstorm:
+        'https://wayfarer-mini-project.s3.amazonaws.com/Weather+Icons/storm.gif',
       // sun
-      'clear sky': '../../assets/weather-files/sun.gif',
+      'clear sky':
+        'https://wayfarer-mini-project.s3.amazonaws.com/Weather+Icons/sun.gif',
       // wind
-      'breezy': '../../assets/weather-files/windy.gif',
-      'strong winds': '../../assets/weather-files/windy.gif',
-      'windy': '../../assets/weather-files/windy.gif',
+      breezy: 'https://wayfarer-mini-project.s3.amazonaws.com/Weather+Icons/windy.gif',
+      'strong winds': 'https://wayfarer-mini-project.s3.amazonaws.com/Weather+Icons/windy.gif',
+      windy: 'https://wayfarer-mini-project.s3.amazonaws.com/Weather+Icons/windy.gif',
     };
     const iconImageURL = weatherIcons[weatherDesc.toLowerCase()] || '';
     this.weatherIconURL = `/assets/icons/${iconImageURL}`;
