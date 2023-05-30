@@ -4,7 +4,6 @@
  <br>
  <div style="display: flex;">
  <img src="https://wayfarer-mini-project.s3.amazonaws.com/main-display.png" alt="Main Display page with a picture of cities" width="1000" height="600">
-<!-- <img src="https://wayfarer-mini-project.s3.amazonaws.com/cities-page.png" alt="City page with a list of cities starting with San Francisco" width="800" height="500"> -->
 </div>
 
 
