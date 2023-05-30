@@ -8,6 +8,10 @@ import { WeatherService } from '../../services/weather.service';
  * Component responsible for displaying detailed information about a specific city.
  */
 
+interface WeatherIcons {
+  [key: string]: string;
+}
+
 @Component({
   selector: 'app-city-info',
   templateUrl: './city-info.component.html',
@@ -20,6 +24,8 @@ export class CityInfoComponent implements OnInit {
   city: any;
   // Weather data after each
   weatherData: any;
+  // Weather icon display
+  weatherIconURL: any;
 
   /**
    * Constructs an instance of CityInfoComponent.
@@ -39,14 +45,34 @@ export class CityInfoComponent implements OnInit {
    */
 
   getWeather(): void {
-    this.weatherService.getWeather(this.city.name.toLowerCase()).subscribe((data) => {
-      this.weatherData = data;
-    });
+    this.weatherService
+      .getWeather(this.city.name.toLowerCase())
+      .subscribe((data) => {
+        this.weatherData = data;
+        this.setWeatherIcon();
+      });
+  }
+
+  setWeatherIcon(): void {
+    let weatherDesc = this.weatherData.weather[0].description;
+    const weatherIcons: WeatherIcons = {
+      'clear sky': '../../assets/weather-files/sun.gif',
+      'few clouds': '../../assets/weather-files/cloudy.gif',
+      'scattered clouds': '../../assets/weather-files/cloudy.gif',
+      'broken clouds': '../../assets/weather-files/cloudy.gif',
+      'shower rain': '../../assets/weather-files/rain.gif',
+      'rain': '../../assets/weather-files/rain.gif',
+      'thunderstorm': '../../assets/weather-files/storm.gif',
+      'snow': '../../assets/weather-files/snow.gif',
+      'overcast clouds': '../../assets/weather-files/cloudy.gif',
+    };
+    const iconImageURL = weatherIcons[weatherDesc.toLowerCase()] || '';
+    this.weatherIconURL = `/assets/icons/${iconImageURL}`;
   }
 
   // Weather API returns Kelvin value. Convert to Fahrenheit
   convertKelvinsToFahrenheit(temp: number): number {
-    return Math.round((temp - 273.15) * 9 / 5 + 32);
+    return Math.round(((temp - 273.15) * 9) / 5 + 32);
   }
 
   ngOnInit(): void {
