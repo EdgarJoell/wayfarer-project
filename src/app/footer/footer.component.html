@@ -1,7 +1,19 @@
 <div id="footer" class="bg-dark">
-   <img src="https://wayfarer-mini-project.s3.amazonaws.com/WAYFARER+(2).png">
-   <div class="credits">
-      <h3>Created by:</h3>
-      <p>Jaime Padilla, Kevin Barrios, and Edgar Zambrana</p>
-   </div>
+  <div class="footer-content">
+    <app-logo></app-logo>>
+    <div class="credits">
+      <h4>Development Team</h4>
+      <ul *ngFor="let dev of developers">
+        <li>
+          {{ dev.name }}
+          <div class="external-links">
+            <a href="{{ dev.github }}" target="_blank">
+               <i class="fa-brands fa-github"></i></a>
+            <a href="{{ dev.linkedIn }}" target="_blank">
+               <i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>

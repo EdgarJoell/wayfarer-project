@@ -8,16 +8,26 @@ h4 {
 }
 
 .others {
-   height: 6rem;
+   height: 6.5rem;
    width: 14rem;
    display: flex;
    margin: 0.5rem;
    border: 1px solid gray;
 }
 
+/* .posts {
+   overflow: scroll;
+} */
+
+.titles {
+   font-size: 14pt;
+   height: 5rem;
+}
+
 .others-container {
    display: flex;
-   overflow: scroll;
+   overflow-x: scroll;
+   overflow-y: hidden;
 }
 
 #posts-container {

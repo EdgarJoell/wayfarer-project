@@ -26,6 +26,10 @@ h2 {
     margin: auto;
 }
 
+.card:active {
+  background-color: #f9a21b;
+}
+
 .card.mb-3:hover {
   background-color: #f9a21b;
 }

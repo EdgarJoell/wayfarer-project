@@ -1,8 +1,52 @@
-.comment-container {
-    border: 2px solid red;
+.modal-content {
+    min-width: 31rem;
+    width: 28rem;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+    width: 30rem;
+}
+
+.form-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
     display: flex;
-    margin-right: 2.8rem;
+}
+
+.form-control {
+    padding: .5rem;
+    margin: 5px;
+    width: 24.5rem;
+}
+
+textarea {
+    min-height: 8rem;
+    max-height: 8rem;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn.btn-secondary {
+    width: 96.66px;
 }
