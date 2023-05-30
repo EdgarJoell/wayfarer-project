@@ -13,6 +13,7 @@ import { PostsService } from '../services/posts.service';
 import { CitiesService } from '../services/cities.service';
 import { WeatherWidgetComponent } from './weather/weather-widget/weather-widget.component';
 import { WeatherService } from '../services/weather.service';
+import { ATagsDirective } from '../directives/a-tags.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { WeatherService } from '../services/weather.service';
     PostsComponent,
     CommentContainerComponent,
     PostPageComponent,
-    WeatherWidgetComponent
+    WeatherWidgetComponent,
+    ATagsDirective,
   ],
   providers: [PostsService, CitiesService, WeatherService],
   imports: [CommonModule, HeaderModule, AppRoutingModule, FormsModule],
